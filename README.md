@@ -11,6 +11,8 @@
 
 Lint Filesystem with 🐊[**Putout**](https://github.com/coderaiser/putout). Creates [`.filesystem.json`](https://github.com/putoutjs/redlint/blob/master/.filesystem.json) file for further lint.
 
+Checkout in 🐊[**Putout Editor**](https://putout.cloudcmd.io/#/gist/0614c2da35a1864b59ac284f18656328/695a9960c401d4e8f6744f58eac591d8f9185235).
+
 ## Install
 
 ```
