@@ -1,8 +1,6 @@
 import {lintJSON} from 'putout/lint/json';
-
 import process from 'node:process';
 import {writeFile} from 'node:fs/promises';
-
 import {buildTree} from '../lib/redlint.js';
 
 const {stringify} = JSON;
