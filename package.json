@@ -6,6 +6,9 @@
   "description": "Lint Filesystem with 🐊Putout",
   "homepage": "https://github.com/putoutjs/redlint#readme",
   "main": "./lib/redlint.js",
+  "bin": {
+    "redlint": "bin/redlint.js"
+  },
   "exports": {
     ".": "./lib/redlint.js"
   },

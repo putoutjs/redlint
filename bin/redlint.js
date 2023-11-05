@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {lintJSON} from 'putout/lint/json';
 import process from 'node:process';
 import {writeFile} from 'node:fs/promises';
