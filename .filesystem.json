@@ -37,6 +37,9 @@
         "type": "file",
         "filename": "/Users/coderaiser/redlint/package.json"
     }, {
+        "type": "file",
+        "filename": "/Users/coderaiser/redlint/.filesystem.json"
+    }, {
         "type": "directory",
         "filename": "/Users/coderaiser/redlint/.github",
         "files": [{
