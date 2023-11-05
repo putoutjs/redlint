@@ -1,3 +1,9 @@
+2023.11.05, v1.0.2
+
+feature:
+- dfc4a49 redlint: putout v32.15.1
+- f3ac849 redlint: ignore
+
 2023.11.05, v1.0.1
 
 fix:

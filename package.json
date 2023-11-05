@@ -1,6 +1,6 @@
 {
   "name": "redlint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Lint Filesystem with 🐊Putout",
@@ -27,7 +27,8 @@
     "report": "madrun report"
   },
   "dependencies": {
-    "ignore": "^5.2.4"
+    "ignore": "^5.2.4",
+    "putout": "^32.15.1"
   },
   "keywords": [
     "putout",
@@ -49,7 +50,6 @@
     "mock-require": "^3.0.3",
     "montag": "^1.0.0",
     "nodemon": "^3.0.1",
-    "putout": "^32.15.1",
     "supertape": "^8.0.0",
     "try-catch": "^3.0.0"
   },
