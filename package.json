@@ -46,16 +46,7 @@
     "generate"
   ],
   "devDependencies": {
-    "@babel/plugin-codemod-object-assign-to-object-spread": "^7.10.4",
-    "@putout/plugin-minify": "^5.0.0",
-    "@putout/plugin-redlint": "^3.0.0",
-    "@putout/plugin-promises": "^13.0.0",
-    "@putout/plugin-react-hook-form": "^4.0.0",
-    "@putout/plugin-react-hooks": "^5.0.0",
-    "acorn": "^8.8.2",
     "c8": "^8.0.0",
-    "check-dts": "^0.7.2",
-    "escover": "^3.0.0",
     "eslint": "^8.0.1",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-putout": "^21.0.1",
