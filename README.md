@@ -9,7 +9,7 @@
 [CoverageURL]: https://coveralls.io/github/putoutjs/printer?branch=master
 [CoverageIMGURL]: https://coveralls.io/repos/putoutjs/printer/badge.svg?branch=master&service=github
 
-Lint Filesystem with 🐊[**Putout**](https://github.com/coderaiser/putout). Creates `.filesystem.json` file for further lint.
+Lint Filesystem with 🐊[**Putout**](https://github.com/coderaiser/putout). Creates [`.filesystem.json`](https://github.com/putoutjs/redlint/blob/master/.filesystem.json) file for further lint.
 
 ## Install
 
