@@ -10,26 +10,7 @@
     }, {
         "type": "directory",
         "filename": "/Users/coderaiser/redlint/test",
-        "files": [{
-            "type": "directory",
-            "filename": "/Users/coderaiser/redlint/test/print-extension",
-            "files": [{
-                "type": "file",
-                "filename": "/Users/coderaiser/redlint/test/print-extension/from.js"
-            }, {
-                "type": "file",
-                "filename": "/Users/coderaiser/redlint/test/print-extension/print-extension.js"
-            }]
-        }, {
-            "type": "file",
-            "filename": "/Users/coderaiser/redlint/test/printer.types.ts"
-        }, {
-            "type": "file",
-            "filename": "/Users/coderaiser/redlint/test/printer.js"
-        }, {
-            "type": "file",
-            "filename": "/Users/coderaiser/redlint/test/printer.errors.ts"
-        }]
+        "files": []
     }, {
         "type": "directory",
         "filename": "/Users/coderaiser/redlint/bin",
@@ -39,16 +20,42 @@
         }]
     }, {
         "type": "file",
+        "filename": "/Users/coderaiser/redlint/yarn-error.log"
+    }, {
+        "type": "file",
+        "filename": "/Users/coderaiser/redlint/ChangeLog"
+    }, {
+        "type": "file",
         "filename": "/Users/coderaiser/redlint/.npmrc"
     }, {
         "type": "file",
         "filename": "/Users/coderaiser/redlint/README.md"
     }, {
         "type": "file",
-        "filename": "/Users/coderaiser/redlint/package.json"
+        "filename": "/Users/coderaiser/redlint/.gitignore"
     }, {
         "type": "file",
-        "filename": "/Users/coderaiser/redlint/.filesystem.json"
+        "filename": "/Users/coderaiser/redlint/package.json"
+    }, {
+        "type": "directory",
+        "filename": "/Users/coderaiser/redlint/.github",
+        "files": [{
+            "type": "file",
+            "filename": "/Users/coderaiser/redlint/.github/FUNDING.yml"
+        }, {
+            "type": "directory",
+            "filename": "/Users/coderaiser/redlint/.github/workflows",
+            "files": [{
+                "type": "file",
+                "filename": "/Users/coderaiser/redlint/.github/workflows/nodejs.yml"
+            }]
+        }, {
+            "type": "file",
+            "filename": "/Users/coderaiser/redlint/.github/PULL_REQUEST_TEMPLATE.md"
+        }, {
+            "type": "file",
+            "filename": "/Users/coderaiser/redlint/.github/ISSUE_TEMPLATE.md"
+        }]
     }, {
         "type": "directory",
         "filename": "/Users/coderaiser/redlint/lib",
