@@ -1,3 +1,8 @@
+2023.11.07, v1.0.6
+
+fix:
+- b399dc4 redlint: dir
+
 2023.11.05, v1.0.5
 
 feature:
