@@ -64,6 +64,12 @@
         "filename": "/Users/coderaiser/redlint/lib",
         "files": [{
             "type": "file",
+            "filename": "/Users/coderaiser/redlint/lib/.redlint.js.swp"
+        }, {
+            "type": "file",
+            "filename": "/Users/coderaiser/redlint/lib/redlint.spec.js"
+        }, {
+            "type": "file",
             "filename": "/Users/coderaiser/redlint/lib/redlint.js"
         }]
     }, {
