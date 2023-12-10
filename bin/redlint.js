@@ -8,12 +8,13 @@ import {convertToSimple} from '../lib/simple.js';
 
 const {stringify} = JSON;
 const result = await buildTree(process.cwd());
-const filesystem = lintJSON(stringify(result));
 const [arg] = process.argv.slice(2);
 
 if (arg === 'simple') {
-    await writeFile('.filesystem.json', convertToSimple(filesystem));
+    await writeFile('.filesystem.json', lintJSON(stringify(convertToSimple(result))));
     process.exit(0);
 }
+
+const filesystem = lintJSON(stringify(result));
 
 await writeFile('.filesystem.json', filesystem);
