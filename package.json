@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "ignore": "^5.2.4",
-    "putout": "^32.15.1"
+    "putout": "^34.0.0"
   },
   "keywords": [
     "putout",
