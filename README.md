@@ -25,8 +25,16 @@ npm i redlint -g
 
 ## Usage Example
 
+To produce `.filesystem.json` file use:
+
 ```sh
 redlint
+```
+
+When you want `simple filesystem` format use:
+
+```sh
+redlint simple
 ```
 
 ## License
