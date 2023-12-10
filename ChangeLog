@@ -1,3 +1,13 @@
+2023.12.10, v2.0.0
+
+feature:
+- 7a10a8f redlint: eslint-plugin-putout v22.0.0
+- fc2057e redlint: madrun v10.0.0
+- 6c6c7d2 redlint: supertape v9.0.0
+- 273d314 redlint: putout v34.0.0
+- 89d7abb drop support of node < 18
+- 91a0203 redlint: simple
+
 2023.11.19, v1.0.7
 
 feature:
