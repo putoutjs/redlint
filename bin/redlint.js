@@ -9,7 +9,7 @@ import logo from '../lib/logo.js'
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
 import {scan, fix} from '../lib/run.js';
-import {workerScan} from '../lib/worker.js';
+import {masterScan} from '../lib/master.js';
 
 const {stringify} = JSON;
 
@@ -33,7 +33,7 @@ if (arg === 'simple') {
 const filesystem = lintJSON(stringify(result));
 
 if (arg === 'scan') {
-    const result = await workerScan(filesystem, ora);
+    const result = await masterScan(filesystem, ora);
     console.log(result);
     process.exit();
 }
