@@ -31,6 +31,18 @@ To produce `.filesystem.json` file use:
 redlint
 ```
 
+Scan filesystem:
+
+```sh
+redlint scan
+```
+
+Fix filesystem:
+
+```sh
+redlint fix
+```
+
 When you want `simple filesystem` format use:
 
 ```sh

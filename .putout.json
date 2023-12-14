@@ -1,3 +1,11 @@
 {
-    "printer": "putout"
+    "printer": "putout",
+    "rules": {
+        "filesystem/remove-files": ["on", {
+            "names": ["coverage"]
+        }]
+    },
+    "ignore": [
+        "!**/coverage"
+    ]
 }
