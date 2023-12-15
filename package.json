@@ -30,6 +30,7 @@
     "report": "madrun report"
   },
   "dependencies": {
+    "@putout/engine-runner": "^20.1.0",
     "ignore": "^5.2.4",
     "ora": "^7.0.1",
     "putout": "^34.0.0"
