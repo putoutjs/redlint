@@ -1,3 +1,19 @@
+2023.12.15, v2.1.0
+
+fix:
+- 698d497 simple
+
+feature:
+- 80d07cc redlint: fix
+- 33de76d add fix
+- 036e95b redlint: @putout/processor-filesystem v3.0.0
+- bddc376 redlint: chalk v5.3.0
+- eced86f redlint: @putout/engine-runner v20.1.0
+- a4dc1a3 redlint: ignores: simplify
+- 62df83e redlint: show count of errors
+- eed1162 redlint: add ability to scan
+- 4f52113 redlint: estree-to-babel v9.0.0
+
 2023.12.10, v2.0.0
 
 feature:
