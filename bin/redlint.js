@@ -8,6 +8,7 @@ import logo from '../lib/logo.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
 import {masterLint} from '../lib/master.js';
+import {lint} from '../lib/lint.js';
 
 const {stringify} = JSON;
 
@@ -39,13 +40,16 @@ if (arg === 'scan') {
     process.exit();
 }
 
-if (arg === 'fix') {
-    const result = await masterLint(filesystem, {
+if (arg === 'lint') {
+    const result = lint(filesystem, {
         fix: true,
     });
     
     console.log(result);
     process.exit();
 }
+
+if (arg === 'fix')
+    process.exit();
 
 await writeFile('.filesystem.json', filesystem);
