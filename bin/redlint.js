@@ -4,11 +4,10 @@ import {lintJSON} from 'putout/lint/json';
 import process from 'node:process';
 import {writeFile} from 'node:fs/promises';
 import ora from 'ora';
-
-import logo from '../lib/logo.js'
+import logo from '../lib/logo.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
-import {scan, fix} from '../lib/run.js';
+import {fix} from '../lib/run.js';
 import {masterScan} from '../lib/master.js';
 
 const {stringify} = JSON;
