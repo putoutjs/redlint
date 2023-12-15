@@ -7,8 +7,7 @@ import ora from 'ora';
 import logo from '../lib/logo.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
-import {fix} from '../lib/run.js';
-import {masterScan} from '../lib/master.js';
+import {masterLint} from '../lib/master.js';
 
 const {stringify} = JSON;
 
@@ -32,14 +31,21 @@ if (arg === 'simple') {
 const filesystem = lintJSON(stringify(result));
 
 if (arg === 'scan') {
-    const result = await masterScan(filesystem, ora);
+    const result = await masterLint(filesystem, {
+        fix: false,
+    });
+    
     console.log(result);
     process.exit();
 }
 
 if (arg === 'fix') {
-    fix(filesystem);
+    const result = await masterLint(filesystem, {
+        fix: true,
+    });
+    console.log(result);
     process.exit();
 }
+
 
 await writeFile('.filesystem.json', filesystem);
