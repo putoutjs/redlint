@@ -53,7 +53,6 @@ redlint simple
 
 ![image](https://github.com/putoutjs/redlint/assets/1573141/cad02be5-f1b9-43da-a55c-a58ff16cad42)
 
-
 ## License
 
 MIT
