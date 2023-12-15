@@ -13,6 +13,8 @@
 >
 > **(c) The Book of Kon, PoKon and ZaKon**
 
+![image](https://github.com/putoutjs/redlint/assets/1573141/120df37e-cc7d-420d-a73d-777455335c9c)
+
 Lint Filesystem with 🐊[**Putout**](https://github.com/coderaiser/putout). Creates [`.filesystem.json`](https://github.com/putoutjs/redlint/blob/master/.filesystem.json) file for further lint.
 
 Checkout in 🐊[**Putout Editor**](https://putout.cloudcmd.io/#/gist/0614c2da35a1864b59ac284f18656328/695a9960c401d4e8f6744f58eac591d8f9185235).
@@ -48,6 +50,9 @@ When you want `simple filesystem` format use:
 ```sh
 redlint simple
 ```
+
+![image](https://github.com/putoutjs/redlint/assets/1573141/cad02be5-f1b9-43da-a55c-a58ff16cad42)
+
 
 ## License
 
