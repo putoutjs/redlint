@@ -15,7 +15,6 @@
 
 ![image](https://github.com/putoutjs/redlint/assets/1573141/ec0efee1-0bfc-4595-ba85-aaaabe274a34)
 
-
 What if **Filesystem** was a simple **JSON** file [`.filesystem.json`](https://github.com/putoutjs/redlint/blob/master/.filesystem.json). What if you can transform **JSON** file with 🐊[**Putout**](https://github.com/coderaiser/putout) code transformer and this changes modify **Filesystem**?
 
 What if I tell you it is possible? 😱 Checkout in 🐊[**Putout Editor**](https://putout.cloudcmd.io/#/gist/0614c2da35a1864b59ac284f18656328/695a9960c401d4e8f6744f58eac591d8f9185235).
@@ -34,13 +33,11 @@ To scan your files use `redlint scan`:
 
 ![image](https://github.com/putoutjs/redlint/assets/1573141/c17de523-66ea-49a1-b65d-4872ff1ecb37)
 
-
 ## Scan
 
 To fix your files use `redlint fix`:
 
 ![image](https://github.com/putoutjs/redlint/assets/1573141/5ce7a8de-b5c1-44b7-8302-918b9e58b185)
-
 
 ## Generate
 
