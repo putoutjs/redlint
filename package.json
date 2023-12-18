@@ -30,6 +30,7 @@
     "report": "madrun report"
   },
   "dependencies": {
+    "@putout/cli-choose": "^1.1.1",
     "@putout/engine-runner": "^20.1.0",
     "@putout/formatter-codeframe": "^6.0.0",
     "@putout/processor-filesystem": "^3.0.0",
