@@ -50,11 +50,10 @@ if (arg === 'lint') {
 }
 
 if (arg === 'fix') {
-    const result = await masterLint(filesystem, {
+    await masterLint(filesystem, {
         fix: true,
     });
     
-    console.log(result);
     process.exit();
 }
 
