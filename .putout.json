@@ -1,9 +1,17 @@
 {
     "printer": "putout",
     "rules": {
-        "filesystem/remove-files": ["off", {
-            "names": ["coverage"]
-        }]
+        "filesystem/remove-files": [
+            "on",
+            {
+                "names": [
+                    "coverage"
+                ]
+            }
+        ],
+        "remove-unused-variables": "off",
+        "remove-console": "off",
+        "nodejs/declare": "off"
     },
     "ignore": [
         "!**/coverage"

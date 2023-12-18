@@ -3,8 +3,14 @@
 import {lintJSON} from 'putout/lint/json';
 import process from 'node:process';
 import {writeFile} from 'node:fs/promises';
+import formatterCodeFrame from '@putout/formatter-codeframe';
+
+const location = {
+  start: { line: 2, column: 17 },
+  end: { line: 4, column: 3 },
+};
 import ora from 'ora';
-import logo from '../lib/logo.js';
+import {help} from '../lib/help.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
 import {masterLint} from '../lib/master.js';
@@ -14,8 +20,8 @@ const {stringify} = JSON;
 
 const [arg] = process.argv.slice(2);
 
-if (arg === 'help') {
-    logo();
+if (!arg || arg === 'help') {
+    help();
     process.exit();
 }
 
@@ -36,8 +42,11 @@ if (arg === 'scan') {
         fix: false,
     });
     
-    console.log(result);
-    process.exit();
+    if (!result.length)
+         process.exit();
+    
+    console.error(result);
+    process.exit(1);
 }
 
 if (arg === 'lint') {
@@ -45,16 +54,28 @@ if (arg === 'lint') {
         fix: true,
     });
     
-    console.log(result);
+    process.stderr.write(result);
     process.exit();
 }
 
 if (arg === 'fix') {
-    await masterLint(filesystem, {
+    const places = await masterLint(filesystem, {
         fix: true,
     });
     
+    const result = await formatterCodeFrame({
+        name: '.filesystem.json',
+        source: filesystem,
+        places,
+        index: 0,
+        count: places.length,
+        filesCount: 1,
+        errorsCount: places.length,
+    });
+    
+    process.stdout.write(result);
     process.exit();
 }
 
-await writeFile('.filesystem.json', filesystem);
+if (arg === 'generate')
+    await writeFile('.filesystem.json', filesystem);
