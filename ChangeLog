@@ -1,3 +1,8 @@
+2023.12.18, v3.0.0
+
+feature:
+- 0a8d5f1 redlint: move generate to separete option, show help by default
+
 2023.12.18, v2.1.2
 
 fix:
