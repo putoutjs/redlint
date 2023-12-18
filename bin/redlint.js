@@ -49,7 +49,12 @@ if (arg === 'lint') {
     process.exit();
 }
 
-if (arg === 'fix')
+if (arg === 'fix') {
+    const result = await masterLint(filesystem, {
+        fix: true,
+    });
+    console.log(result);
     process.exit();
+}
 
 await writeFile('.filesystem.json', filesystem);
