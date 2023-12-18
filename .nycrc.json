@@ -10,7 +10,10 @@
         "**/.*.*",
         "**/*.d.ts",
         "**/fixture.js",
-        "**/bin"
+        "**/bin",
+        "**/start.js",
+        "**/help.js",
+        "**/master.js"
     ],
     "branches": 100,
     "lines": 100,
