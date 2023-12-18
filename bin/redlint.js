@@ -4,17 +4,23 @@ import {lintJSON} from 'putout/lint/json';
 import process from 'node:process';
 import {writeFile} from 'node:fs/promises';
 import formatterCodeFrame from '@putout/formatter-codeframe';
-
-const location = {
-  start: { line: 2, column: 17 },
-  end: { line: 4, column: 3 },
-};
 import ora from 'ora';
 import {help} from '../lib/help.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
 import {masterLint} from '../lib/master.js';
 import {lint} from '../lib/lint.js';
+
+const location = {
+    start: {
+        line: 2,
+        column: 17,
+    },
+    end: {
+        line: 4,
+        column: 3,
+    },
+};
 
 const {stringify} = JSON;
 
@@ -43,7 +49,7 @@ if (arg === 'scan') {
     });
     
     if (!result.length)
-         process.exit();
+        process.exit();
     
     console.error(result);
     process.exit(1);
