@@ -1,7 +1,7 @@
 {
     "printer": "putout",
     "rules": {
-        "filesystem/remove-files": ["on", {
+        "filesystem/remove-files": ["off", {
             "names": ["coverage"]
         }]
     },
