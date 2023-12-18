@@ -74,6 +74,25 @@ if (arg === 'scan') {
     process.exit(1);
 }
 
+if (arg === 'scan:frame') {
+    const places = await masterLint(filesystem, {
+        fix: true,
+    });
+    
+    const result = await formatterCodeFrame({
+        name: '.filesystem.json',
+        source: filesystem,
+        places,
+        index: 0,
+        count: places.length,
+        filesCount: 1,
+        errorsCount: places.length,
+    });
+    
+    process.stderr.write(result);
+    process.exit(1);
+}
+
 if (arg === 'lint') {
     const places = lint(filesystem, {
         fix: true,
