@@ -4,9 +4,7 @@
         "filesystem/remove-files": ["on", {
             "names": ["coverage"]
         }],
-        "remove-unused-variables": "off",
-        "remove-console": "off",
-        "nodejs/declare": "off"
+        "remove-console": "off"
     },
     "ignore": [
         "!**/coverage"

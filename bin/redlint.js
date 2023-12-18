@@ -11,17 +11,6 @@ import {convertToSimple} from '../lib/simple.js';
 import {masterLint} from '../lib/master.js';
 import {lint} from '../lib/lint.js';
 
-const location = {
-    start: {
-        line: 2,
-        column: 17,
-    },
-    end: {
-        line: 4,
-        column: 3,
-    },
-};
-
 const {stringify} = JSON;
 
 const [arg] = process.argv.slice(2);
