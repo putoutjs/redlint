@@ -1,3 +1,8 @@
+2023.12.18, v2.1.2
+
+fix:
+- 8f947e8 redlint: drop final log
+
 2023.12.18, v2.1.1
 
 fix:
