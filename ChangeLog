@@ -1,3 +1,10 @@
+2023.12.18, v3.0.1
+
+feature:
+- 0afe4be redlint: scan:frame
+- 62a8307 redlint: improve formatter
+- 5d62840 redlint: strip-ansi v7.1.0
+
 2023.12.18, v3.0.0
 
 feature:

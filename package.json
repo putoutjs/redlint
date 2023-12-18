@@ -1,6 +1,6 @@
 {
   "name": "redlint",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Lint Filesystem with 🐊Putout",
@@ -39,7 +39,8 @@
     "fullstore": "^3.0.0",
     "ignore": "^5.2.4",
     "ora": "^7.0.1",
-    "putout": "^34.0.0"
+    "putout": "^34.0.0",
+    "strip-ansi": "^7.1.0"
   },
   "keywords": [
     "putout",
