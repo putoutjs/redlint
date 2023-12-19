@@ -8,7 +8,7 @@ import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
 import {help} from '../lib/help.js';
-import {start} from '../lib/start.js';
+import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
 import {masterLint} from '../lib/master.js';
@@ -21,7 +21,7 @@ let [arg] = process.argv.slice(2);
 let header = true;
 
 if (!arg) {
-    const cmd = await start();
+    const cmd = await choose();
     
     if (!cmd)
         process.exit(1);
@@ -29,6 +29,9 @@ if (!arg) {
     [arg] = stripAnsi(cmd).split(' ');
     header = false;
 }
+
+if (arg === 'exit')
+    process.exit();
 
 if (arg === 'help') {
     help({
@@ -43,7 +46,7 @@ const result = await buildTree(process.cwd());
 
 spinner.succeed();
 
-if (arg === 'simple') {
+if (arg === 'generate:simple') {
     await writeFile('.filesystem.json', lintJSON(stringify(convertToSimple(result))));
     process.exit(0);
 }
