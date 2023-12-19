@@ -31,7 +31,7 @@ npm i redlint -g
 
 You can choose interactively when run `redlint`:
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/a7657733-8d11-4f09-8191-4a9576bb45ed)
+![image](https://github.com/putoutjs/redlint/assets/1573141/1d3c26a6-14f2-43f9-8115-29b28d5d5f26)
 
 ## Scan
 
