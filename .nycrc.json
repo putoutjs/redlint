@@ -11,7 +11,7 @@
         "**/*.d.ts",
         "**/fixture.js",
         "**/bin",
-        "**/start.js",
+        "**/choose.js",
         "**/help.js",
         "**/master.js"
     ],
