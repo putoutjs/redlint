@@ -19,7 +19,7 @@ What if **Filesystem** was a simple **JSON** file [`.filesystem.json`](https://g
 
 What if I tell you it is possible? 😱 Checkout in 🐊[**Putout Editor**](https://putout.cloudcmd.io/#/gist/0614c2da35a1864b59ac284f18656328/695a9960c401d4e8f6744f58eac591d8f9185235).
 
-First time ever! Linter for you **Filesystem** 😏💾.
+First time ever! Linter for your **Filesystem** 😏💾.
 
 ## Install
 
