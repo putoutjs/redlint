@@ -13,7 +13,7 @@
 >
 > **(c) The Book of Kon, PoKon and ZaKon**
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/ec0efee1-0bfc-4595-ba85-aaaabe274a34)
+![image](https://github.com/putoutjs/redlint/assets/1573141/a34a7e75-b30f-4e79-b132-1d411d96ba15)
 
 What if **Filesystem** was a simple **JSON** file [`.filesystem.json`](https://github.com/putoutjs/redlint/blob/master/.filesystem.json). What if you can transform **JSON** file with 🐊[**Putout**](https://github.com/coderaiser/putout) code transformer and this changes modify **Filesystem**?
 
@@ -27,17 +27,23 @@ First time ever! Linter for you **Filesystem** 😏💾.
 npm i redlint -g
 ```
 
+## Choose
+
+You can choose interactively when run `redlint`:
+
+![image](https://github.com/putoutjs/redlint/assets/1573141/a7657733-8d11-4f09-8191-4a9576bb45ed)
+
 ## Scan
 
 To scan your files use `redlint scan`:
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/c17de523-66ea-49a1-b65d-4872ff1ecb37)
+![image](https://github.com/putoutjs/redlint/assets/1573141/4407e58b-8c99-4bb3-9f0a-751ae3a0f0ce)
 
-## Scan
+## Fix
 
 To fix your files use `redlint fix`:
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/5ce7a8de-b5c1-44b7-8302-918b9e58b185)
+![image](https://github.com/putoutjs/redlint/assets/1573141/dc94146b-2a68-4547-80c9-a874f98c3a2a)
 
 ## Generate
 
