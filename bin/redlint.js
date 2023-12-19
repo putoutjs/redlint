@@ -2,7 +2,10 @@
 
 import {lintJSON} from 'putout/lint/json';
 import process from 'node:process';
-import {writeFile} from 'node:fs/promises';
+import {
+    readFile,
+    writeFile,
+} from 'node:fs/promises';
 import stripAnsi from 'strip-ansi';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
@@ -15,7 +18,7 @@ import {masterLint} from '../lib/master.js';
 import {lint} from '../lib/lint.js';
 import {logo} from '../lib/logo.js';
 
-const {stringify} = JSON;
+const {stringify, parse} = JSON;
 
 let [arg] = process.argv.slice(2);
 let header = true;
@@ -32,6 +35,15 @@ if (!arg) {
 
 if (arg === 'exit')
     process.exit();
+
+if (arg === 'version') {
+    const packagePath = new URL('../package.json', import.meta.url);
+    const packageData = await readFile(packagePath);
+    const {version} = parse(packageData);
+    
+    console.log(`v${version}`);
+    process.exit();
+}
 
 if (arg === 'help') {
     help({
