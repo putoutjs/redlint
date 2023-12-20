@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import {lintJSON} from 'putout/lint/json';
+import {join} from 'node:path';
 import process from 'node:process';
 import {
     readFile,
     writeFile,
 } from 'node:fs/promises';
+import {lintJSON} from 'putout/lint/json';
 import stripAnsi from 'strip-ansi';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
-import {join} from 'node:path';
 import {help} from '../lib/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
@@ -19,17 +19,16 @@ import {masterLint} from '../lib/master.js';
 import {masterPack} from '../lib/pack/master.js';
 import {lint} from '../lib/lint.js';
 import {pack} from '../lib/pack/pack.js';
-import {logo} from '../lib/logo.js';
 import {debug} from '../lib/debug.js';
 
 const {stringify, parse} = JSON;
 
-let [arg] = process.argv.slice(2);
+const [arg] = process.argv.slice(2);
 let header = true;
 
-await uiLoop();
+await uiLoop(arg);
 
-async function uiLoop() {
+async function uiLoop(arg) {
     if (!arg) {
         const cmd = await choose();
         
@@ -40,8 +39,12 @@ async function uiLoop() {
         header = false;
     }
     
-    if (arg === 'debug')
+    if (arg === 'debug') {
         arg = await debug();
+        
+        if (arg === 'back')
+            return await uiLoop();
+    }
     
     if (arg === 'exit')
         process.exit();
@@ -100,29 +103,12 @@ async function uiLoop() {
         process.exit(1);
     }
     
-    if (arg === 'scan:debug') {
-        const places = await masterLint(filesystem, {
-            fix: true,
-        });
-        
-        const result = await formatterCodeFrame({
-            name: '.filesystem.json',
-            source: filesystem,
-            places,
-            index: 0,
-            count: places.length,
-            filesCount: 1,
-            errorsCount: places.length,
-        });
-        
-        process.stderr.write(result);
-        process.exit(1);
-    }
-    
     if (arg === 'pack') {
         const result = await masterPack(CWD, filesystem);
         await writeFile(join(CWD, 'filesystem.red'), result);
+        const spinner = ora(`pack 'filesystem.red'`).start();
         
+        spinner.succeed();
         process.exit();
     }
     
@@ -130,15 +116,14 @@ async function uiLoop() {
         const result = pack(CWD, filesystem);
         await writeFile(join(CWD, 'filesystem.red'), result);
         
+        done(`pack 'filesystem.red'`);
         process.exit();
     }
     
-    if (arg === 'lint') {
+    if (arg === 'scan:debug') {
         const places = lint(filesystem, {
             fix: true,
         });
-        
-        console.log(logo);
         
         const result = await formatterCodeFrame({
             name: '.filesystem.json',
@@ -164,4 +149,11 @@ async function uiLoop() {
     
     if (arg === 'generate')
         await writeFile('.filesystem.json', filesystem);
+    
+    done(`generate '.filesystem.json'`);
+}
+
+function done(message) {
+    const spinner = ora(message).start();
+    spinner.succeed();
 }
