@@ -13,7 +13,8 @@
         "**/bin",
         "**/choose.js",
         "**/help.js",
-        "**/master.js"
+        "**/master.js",
+        "**/slave.js"
     ],
     "branches": 100,
     "lines": 100,
