@@ -1,3 +1,9 @@
+2023.12.20, v3.2.0
+
+feature:
+- 333f321 redlint: debug: back
+- 955f5d3 redlint: pack: add
+
 2023.12.19, v3.1.2
 
 feature:
