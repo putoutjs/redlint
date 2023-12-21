@@ -11,13 +11,13 @@ import stripAnsi from 'strip-ansi';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
-import {help} from '../lib/help.js';
+import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
-import {masterLint} from '../lib/master.js';
+import {masterLint} from '../lib/lint/master.js';
 import {masterPack} from '../lib/pack/master.js';
-import {lint} from '../lib/lint.js';
+import {lint} from '../lib/lint/lint.js';
 import {pack} from '../lib/pack/pack.js';
 import {debug} from '../lib/debug.js';
 
