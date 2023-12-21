@@ -122,7 +122,7 @@ async function uiLoop(arg) {
     
     if (arg === 'scan:debug') {
         const places = lint(filesystem, {
-            fix: true,
+            fix: false,
         });
         
         const result = await formatterCodeFrame({
@@ -137,6 +137,25 @@ async function uiLoop(arg) {
         
         process.stderr.write(result);
         process.exit(1);
+    }
+    
+    if (arg === 'fix:debug') {
+        const places = lint(filesystem, {
+            fix: true,
+        });
+        
+        const result = await formatterCodeFrame({
+            name: '.filesystem.json',
+            source: filesystem,
+            places,
+            index: 0,
+            count: places.length,
+            filesCount: 1,
+            errorsCount: places.length,
+        });
+        
+        process.stdout.write(result);
+        process.exit();
     }
     
     if (arg === 'fix') {
