@@ -17,8 +17,10 @@ import {buildTree} from '../lib/redlint.js';
 import {convertToSimple} from '../lib/simple.js';
 import {masterLint} from '../lib/lint/master.js';
 import {masterPack} from '../lib/pack/master.js';
+import {masterExtract} from '../lib/extract/master.js';
 import {lint} from '../lib/lint/lint.js';
 import {pack} from '../lib/pack/pack.js';
+import {extract} from '../lib/extract/extract.js';
 import {debug} from '../lib/debug.js';
 
 const {stringify, parse} = JSON;
@@ -107,6 +109,24 @@ async function uiLoop(arg) {
         const result = await masterPack(CWD, filesystem);
         await writeFile(join(CWD, 'filesystem.red'), result);
         const spinner = ora(`pack 'filesystem.red'`).start();
+        
+        spinner.succeed();
+        process.exit();
+    }
+    
+    if (arg === 'extract') {
+        const filesystem = await readFile(join(CWD, 'filesystem.red'), result);
+        const result = await masterExtract(CWD, filesystem);
+        const spinner = ora(`extract 'filesystem.red'`).start();
+        
+        spinner.succeed();
+        process.exit();
+    }
+    
+    if (arg === 'extract:debug') {
+        const filesystem = await readFile(join(CWD, 'filesystem.red'), result);
+        const result = await extract(CWD, filesystem);
+        const spinner = ora(`extract 'filesystem.red'`).start();
         
         spinner.succeed();
         process.exit();

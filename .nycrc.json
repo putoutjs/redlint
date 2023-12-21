@@ -14,7 +14,9 @@
         "**/choose.js",
         "**/help.js",
         "**/master.js",
-        "**/slave.js"
+        "**/slave.js",
+        "**/run.js",
+        "**/spinner.js"
     ],
     "branches": 100,
     "lines": 100,
