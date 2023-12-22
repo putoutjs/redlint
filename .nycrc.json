@@ -17,6 +17,8 @@
         "**/slave.js",
         "**/run.js",
         "**/spinner.js"
+        "**/menu.js"
+        "**/version.js"
     ],
     "branches": 100,
     "lines": 100,
