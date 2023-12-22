@@ -21,23 +21,24 @@ import {lint} from '../lib/lint/lint.js';
 import {pack} from '../lib/pack/pack.js';
 import {extract} from '../lib/extract/extract.js';
 import {debug} from '../lib/debug.js';
+import {logo} from '../lib/help/logo.js';
 import {version} from '../lib/cli/version.js';
 import {
-    SCAN,
-    SCAN_DEBUG,
-    FIX,
-    FIX_DEBUG,
-    PACK,
-    PACK_DEBUG,
-    EXTRACT,
-    EXTRACT_DEBUG,
-    GENERATE,
-    GENERATE_SIMPLE,
-    HELP,
-    VERSION,
-    DEBUG,
-    BACK,
-    EXIT,
+    isScan,
+    isScanDebug,
+    isFix,
+    isFixDebug,
+    isPack,
+    isPackDebug,
+    isExtract,
+    isExtractDebug,
+    isGenerate,
+    isGenerateSimple,
+    isHelp,
+    isVersion,
+    isDebug,
+    isBack,
+    isExit,
 } from '../lib/menu.js';
 
 const {log} = console;
@@ -52,6 +53,12 @@ await uiLoop(arg);
 
 async function uiLoop(arg) {
     if (!arg) {
+        if (header) {
+            console.log('Lint your files according to 🐊Putout rules.\n');
+            process.stdout.write(logo);
+            console.log('');
+        }
+
         arg = await choose();
         
         if (!arg)
@@ -60,24 +67,24 @@ async function uiLoop(arg) {
         header = false;
     }
     
-    if (arg === DEBUG) {
+    if (isDebug(arg)) {
         arg = await debug();
         
-        if (arg === BACK)
+        if (isBack(arg))
             return await uiLoop();
     }
     
-    if (arg === EXIT)
+    if (isExit(arg))
         process.exit();
     
-    if (arg === VERSION)
+    if (isVersion(arg))
         return version({
             log,
             exit,
             readFile,
         });
     
-    if (arg === HELP) {
+    if (isHelp(arg)) {
         help({
             header,
         });
@@ -91,14 +98,14 @@ async function uiLoop(arg) {
     
     spinner.succeed();
     
-    if (arg === GENERATE_SIMPLE) {
+    if (isGenerateSimple(arg)) {
         await writeFile('.filesystem.json', lintJSON(stringify(convertToSimple(result))));
         process.exit(0);
     }
     
     const filesystem = lintJSON(stringify(result));
     
-    if (arg === SCAN) {
+    if (isScan(arg)) {
         const places = await masterLint(filesystem, {
             fix: false,
         });
@@ -122,7 +129,7 @@ async function uiLoop(arg) {
         process.exit(1);
     }
     
-    if (arg === PACK) {
+    if (isPack(arg)) {
         const result = await masterPack(CWD, filesystem);
         await writeFile(join(CWD, 'filesystem.red'), result);
         const spinner = ora(`pack 'filesystem.red'`).start();
@@ -131,7 +138,7 @@ async function uiLoop(arg) {
         process.exit();
     }
     
-    if (arg === EXTRACT) {
+    if (isExtract(arg)) {
         const filesystem = await readFile(join(CWD, 'filesystem.red'), 'utf8');
         await masterExtract(CWD, filesystem);
         const spinner = ora(`extract 'filesystem.red'`).start();
@@ -140,7 +147,7 @@ async function uiLoop(arg) {
         process.exit();
     }
     
-    if (arg === EXTRACT_DEBUG) {
+    if (isExtractDebug(arg)) {
         const filesystem = await readFile(join(CWD, 'filesystem.red'), 'utf8');
         await extract(CWD, filesystem);
         const spinner = ora(`extract 'filesystem.red'`).start();
@@ -149,7 +156,7 @@ async function uiLoop(arg) {
         process.exit();
     }
     
-    if (arg === PACK_DEBUG) {
+    if (isPackDebug(arg)) {
         const result = pack(CWD, filesystem);
         await writeFile(join(CWD, 'filesystem.red'), result);
         
@@ -157,7 +164,7 @@ async function uiLoop(arg) {
         process.exit();
     }
     
-    if (arg === SCAN_DEBUG) {
+    if (isScanDebug(arg)) {
         const places = lint(filesystem, {
             fix: false,
         });
@@ -176,7 +183,7 @@ async function uiLoop(arg) {
         process.exit(1);
     }
     
-    if (arg === FIX_DEBUG) {
+    if (isFixDebug(arg)) {
         const places = lint(filesystem, {
             fix: true,
         });
@@ -195,7 +202,7 @@ async function uiLoop(arg) {
         process.exit();
     }
     
-    if (arg === FIX) {
+    if (isFix(arg)) {
         await masterLint(filesystem, {
             fix: true,
         });
@@ -203,7 +210,7 @@ async function uiLoop(arg) {
         process.exit();
     }
     
-    if (arg === GENERATE)
+    if (isGenerate(arg))
         await writeFile('.filesystem.json', filesystem);
     
     done(`generate '.filesystem.json'`);
