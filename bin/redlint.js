@@ -58,7 +58,7 @@ async function uiLoop(arg) {
             process.stdout.write(logo);
             console.log('');
         }
-
+        
         arg = await choose();
         
         if (!arg)

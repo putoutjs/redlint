@@ -16,8 +16,8 @@
         "**/master.js",
         "**/slave.js",
         "**/run.js",
-        "**/spinner.js"
-        "**/menu.js"
+        "**/spinner.js",
+        "**/menu.js",
         "**/version.js"
     ],
     "branches": 100,
