@@ -115,8 +115,8 @@ async function uiLoop(arg) {
     }
     
     if (arg === 'extract') {
-        const filesystem = await readFile(join(CWD, 'filesystem.red'), result);
-        const result = await masterExtract(CWD, filesystem);
+        const filesystem = await readFile(join(CWD, 'filesystem.red'), 'utf8');
+        await masterExtract(CWD, filesystem);
         const spinner = ora(`extract 'filesystem.red'`).start();
         
         spinner.succeed();
@@ -124,8 +124,8 @@ async function uiLoop(arg) {
     }
     
     if (arg === 'extract:debug') {
-        const filesystem = await readFile(join(CWD, 'filesystem.red'), result);
-        const result = await extract(CWD, filesystem);
+        const filesystem = await readFile(join(CWD, 'filesystem.red'), 'utf8');
+        await extract(CWD, filesystem);
         const spinner = ora(`extract 'filesystem.red'`).start();
         
         spinner.succeed();
