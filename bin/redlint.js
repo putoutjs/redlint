@@ -7,7 +7,6 @@ import {
     writeFile,
 } from 'node:fs/promises';
 import {lintJSON} from 'putout/lint/json';
-import stripAnsi from 'strip-ansi';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
@@ -22,11 +21,7 @@ import {lint} from '../lib/lint/lint.js';
 import {pack} from '../lib/pack/pack.js';
 import {extract} from '../lib/extract/extract.js';
 import {debug} from '../lib/debug.js';
-
-    
-import {
-    version} from '../lib/cli/version.js';
-
+import {version} from '../lib/cli/version.js';
 import {
     SCAN,
     SCAN_DEBUG,
@@ -41,14 +36,14 @@ import {
     HELP,
     VERSION,
     DEBUG,
+    BACK,
     EXIT,
 } from '../lib/menu.js';
-    
+
 const {log} = console;
 const {exit} = process;
 
-
-const {stringify, parse} = JSON;
+const {stringify} = JSON;
 
 const [arg] = process.argv.slice(2);
 let header = true;
@@ -75,13 +70,12 @@ async function uiLoop(arg) {
     if (arg === EXIT)
         process.exit();
     
-    if (arg === VERSION) {
+    if (arg === VERSION)
         return version({
             log,
             exit,
             readFile,
         });
-    }
     
     if (arg === HELP) {
         help({
