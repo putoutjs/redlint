@@ -165,7 +165,7 @@ async function uiLoop(arg) {
     }
     
     if (isScanDebug(arg)) {
-        const places = lint(filesystem, {
+        const places = await lint(filesystem, {
             fix: false,
         });
         
