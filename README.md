@@ -31,19 +31,19 @@ npm i redlint -g
 
 You can choose interactively when run `redlint`:
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/32a8e9f0-f073-43e7-a592-3bbc7bf056a4)
+<img width="375" alt="image" src="https://github.com/putoutjs/redlint/assets/1573141/910c85bc-f36d-4ad1-be8a-37935bf9c33a">
 
 ## Scan
 
 To scan your files use `redlint scan`:
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/4407e58b-8c99-4bb3-9f0a-751ae3a0f0ce)
+<img width="718" alt="image" src="https://github.com/putoutjs/redlint/assets/1573141/58672a61-4408-4c1e-ab75-2fbcca7f225d">
 
 ## Fix
 
 To fix your files use `redlint fix`:
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/dc94146b-2a68-4547-80c9-a874f98c3a2a)
+<img width="244" alt="image" src="https://github.com/putoutjs/redlint/assets/1573141/3e9d2d3d-8d9c-4753-a2aa-4ca634d19526">
 
 ## Generate
 
