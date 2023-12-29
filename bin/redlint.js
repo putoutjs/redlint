@@ -114,12 +114,13 @@ async function uiLoop(arg) {
             process.exit();
         
         console.log('');
+        
         const dump = await formatterDump({
             name: '.filesystem.json',
             source: filesystem,
             places,
             index: 0,
-            count: places.length,
+            count: 1,
             filesCount: 1,
             errorsCount: places.length,
         });
@@ -174,7 +175,7 @@ async function uiLoop(arg) {
             source: filesystem,
             places,
             index: 0,
-            count: places.length,
+            count: 1,
             filesCount: 1,
             errorsCount: places.length,
         });
