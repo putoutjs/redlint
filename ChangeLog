@@ -1,3 +1,10 @@
+2023.12.29, v3.8.0
+
+feature:
+- 5995280 redlint: icons
+- b1568f5 redlint: ora v8.0.1
+- 6cfc61d redlint: format
+
 2023.12.27, v3.7.0
 
 fix:
