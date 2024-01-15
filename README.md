@@ -13,7 +13,7 @@
 >
 > **(c) The Book of Kon, PoKon and ZaKon**
 
-![image](https://github.com/putoutjs/redlint/assets/1573141/3f239180-a378-48b7-9e68-9cc66e762e2b)
+![image](https://github.com/putoutjs/redlint/assets/1573141/c990a94f-3ea5-42b0-a43f-42caadaad649)
 
 What if **Filesystem** was a simple **JSON** file [`.filesystem.json`](https://github.com/putoutjs/redlint/blob/v2.0.0/.filesystem.json). What if you can transform **JSON** file with 🐊[**Putout**](https://github.com/coderaiser/putout) code transformer and this changes modify **Filesystem**?
 
@@ -31,7 +31,7 @@ npm i redlint -g
 
 You can choose interactively when run `redlint`:
 
-<img width="375" alt="image" src="https://github.com/putoutjs/redlint/assets/1573141/910c85bc-f36d-4ad1-be8a-37935bf9c33a">
+![image](https://github.com/putoutjs/redlint/assets/1573141/906061ba-a5b3-44be-a7ad-40464a9122f6)
 
 ## Scan
 
