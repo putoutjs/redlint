@@ -1,3 +1,9 @@
+2024.01.15, v3.9.0
+
+feature:
+- f627e79 redlint: c8 v9.1.0
+- 29d0f34 redlint: convert: add
+
 2023.12.29, v3.8.0
 
 feature:
