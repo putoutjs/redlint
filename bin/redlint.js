@@ -11,7 +11,6 @@ import {lintJSON} from 'putout/lint/json';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
-import enq from 'enquirer';
 import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
@@ -28,6 +27,7 @@ import {version} from '../lib/cli/version.js';
 import {chooseConvert} from '../lib/convert/index.js';
 import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
+import {askFilename} from '../lib/dialog.js';
 import {
     isScan,
     isScanDebug,
@@ -51,7 +51,6 @@ import {
 
 const {log} = console;
 const {exit} = process;
-const {prompt} = enq;
 
 const {stringify} = JSON;
 
@@ -120,27 +119,19 @@ async function uiLoop(arg) {
     const filesystem = lintJSON(stringify(result));
     
     if (isConvertChosen(arg)) {
-        const [e, result] = await tryToCatch(prompt, {
-            type: 'input',
-            name: 'filename',
-            message: 'Filename:',
-        });
+        const filename = await askFilename();
         
-        if (!e && result?.filename)
+        if (filename)
             await masterConvert(result.filename, arg, filesystem);
         
         return;
     }
     
     if (isConvertChosenDebug(arg)) {
-        const [e, result] = await tryToCatch(prompt, {
-            type: 'input',
-            name: 'filename',
-            message: 'Filename:',
-        });
+        const filename = await askFilename();
         
-        if (!e && result?.filename)
-            await convert(result.filename, arg, filesystem);
+        if (filename)
+            await convert(filename, arg, filesystem);
         
         return;
     }
