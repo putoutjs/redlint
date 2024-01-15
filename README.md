@@ -42,6 +42,7 @@ To scan your files use `redlint scan`:
 ## Convert
 
 To convert file to **JSON** or **JavaScript** use:
+
 ![image](https://github.com/putoutjs/redlint/assets/1573141/2a2df8f7-ea3b-4158-b3f3-d30522dbdd7e)
 ![image](https://github.com/putoutjs/redlint/assets/1573141/847622e9-cfa5-47fd-9503-f526214dcf23)
 
