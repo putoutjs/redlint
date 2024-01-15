@@ -18,6 +18,7 @@
         "**/run.js",
         "**/spinner.js",
         "**/menu.js",
+        "**/convert/index.js",
         "**/version.js"
     ],
     "branches": 100,

@@ -6,10 +6,12 @@ import {
     readFile,
     writeFile,
 } from 'node:fs/promises';
+import tryToCatch from 'try-to-catch';
 import {lintJSON} from 'putout/lint/json';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
+import enq from 'enquirer';
 import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
@@ -23,6 +25,9 @@ import {extract} from '../lib/extract/extract.js';
 import {debug} from '../lib/debug.js';
 import {logo} from '../lib/help/logo.js';
 import {version} from '../lib/cli/version.js';
+import {chooseConvert} from '../lib/convert/index.js';
+import {convert} from '../lib/convert/convert.js';
+import {masterConvert} from '../lib/convert/master.js';
 import {
     isScan,
     isScanDebug,
@@ -37,12 +42,16 @@ import {
     isHelp,
     isVersion,
     isDebug,
+    isConvert,
+    isConvertChosen,
+    isConvertChosenDebug,
     isBack,
     isExit,
 } from '../lib/menu.js';
 
 const {log} = console;
 const {exit} = process;
+const {prompt} = enq;
 
 const {stringify} = JSON;
 
@@ -67,16 +76,6 @@ async function uiLoop(arg) {
         header = false;
     }
     
-    if (isDebug(arg)) {
-        arg = await debug();
-        
-        if (isBack(arg))
-            return await uiLoop();
-    }
-    
-    if (isExit(arg))
-        process.exit();
-    
     if (isVersion(arg))
         return version({
             log,
@@ -88,8 +87,23 @@ async function uiLoop(arg) {
         help({
             header,
         });
-        process.exit();
+        return process.exit();
     }
+    
+    if (isConvert(arg))
+        arg = await chooseConvert();
+    
+    if (isDebug(arg))
+        arg = await debug();
+    
+    if (isBack(arg))
+        return await uiLoop();
+    
+    if (isExit(arg))
+        return process.exit();
+    
+    if (!arg)
+        return;
     
     log('Running:');
     const spinner = ora('index filesystem').start();
@@ -104,6 +118,32 @@ async function uiLoop(arg) {
     }
     
     const filesystem = lintJSON(stringify(result));
+    
+    if (isConvertChosen(arg)) {
+        const [e, result] = await tryToCatch(prompt, {
+            type: 'input',
+            name: 'filename',
+            message: 'Filename:',
+        });
+        
+        if (!e && result?.filename)
+            await masterConvert(result.filename, arg, filesystem);
+        
+        return;
+    }
+    
+    if (isConvertChosenDebug(arg)) {
+        const [e, result] = await tryToCatch(prompt, {
+            type: 'input',
+            name: 'filename',
+            message: 'Filename:',
+        });
+        
+        if (!e && result?.filename)
+            await convert(result.filename, arg, filesystem);
+        
+        return;
+    }
     
     if (isScan(arg)) {
         const places = await masterLint(filesystem, {
