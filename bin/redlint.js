@@ -6,7 +6,6 @@ import {
     readFile,
     writeFile,
 } from 'node:fs/promises';
-import tryToCatch from 'try-to-catch';
 import {lintJSON} from 'putout/lint/json';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
