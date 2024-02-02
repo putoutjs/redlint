@@ -1,3 +1,9 @@
+2024.02.02, v3.11.2
+
+feature:
+- ec6557e redlint: @putout/processor-filesystem v4.0.0
+- c4835f2 redlint: @putout/engine-runner v21.0.0
+
 2024.02.02, v3.11.1
 
 fix:
