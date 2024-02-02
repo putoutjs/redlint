@@ -156,7 +156,6 @@ async function uiLoop(arg) {
         });
         
         process.stderr.write(dump);
-        
         process.exit(1);
     }
     
