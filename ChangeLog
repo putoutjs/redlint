@@ -1,3 +1,9 @@
+2024.02.02, v3.11.0
+
+feature:
+- 6b261fa redlint: @putout/operator-json v2.0.0
+- 2224098 redlint: supertape v10.0.0
+
 2024.01.19, v3.10.1
 
 feature:
