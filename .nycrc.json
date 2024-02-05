@@ -19,6 +19,7 @@
         "**/run.js",
         "**/spinner.js",
         "**/menu.js",
+        "**/lint",
         "**/convert/index.js",
         "**/version.js"
     ],
