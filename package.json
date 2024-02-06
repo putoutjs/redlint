@@ -31,9 +31,11 @@
   },
   "dependencies": {
     "@putout/cli-choose": "^1.1.1",
+    "@putout/cli-filesystem": "^2.0.1",
     "@putout/engine-runner": "^21.0.0",
     "@putout/formatter-codeframe": "^6.0.0",
     "@putout/formatter-dump": "^4.0.1",
+    "@putout/operator-filesystem": "^4.0.1",
     "@putout/operator-json": "^2.0.0",
     "@putout/plugin-filesystem": "^4.0.0",
     "@putout/processor-filesystem": "^4.0.0",
@@ -56,7 +58,6 @@
     "generate"
   ],
   "devDependencies": {
-    "@putout/operator-filesystem": "^4.0.1",
     "@putout/test": "^9.0.0",
     "c8": "^9.1.0",
     "eslint": "^8.0.1",
