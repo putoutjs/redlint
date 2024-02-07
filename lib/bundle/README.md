@@ -13,6 +13,7 @@ Traverse all files starting from `entry` and get all filenames.
 - [`parse-filenames`](https://putout.cloudcmd.io/#/gist/d973366be6b07ab705b5c9d793369904/3067150ad161029e75b95e9bfff290e03953ef41);
 - [`resolve-filenames`](https://putout.cloudcmd.io/#/gist/8ca1ac9b5fb4d1a47d185836c3f0b393/edf99b8064fe0faf4545aa0cc66138a7fa34c557);
 - [`resolve-require`](https://putout.cloudcmd.io/#/gist/833539f66cb238fcc3b6ca6cee61ef9e/79a068c96b686bb0eacdf3f570d532981499b114);
+- [`bundle-files`](https://putout.cloudcmd.io/#/gist/7dd3bffa8e88f7542c84065f622b63d7/3b1e68e0babc3a72af947076ed9801c0034a096e);
 
 ## Bundle all files to object
 
