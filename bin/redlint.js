@@ -46,7 +46,9 @@ import {
     isConvertChosenDebug,
     isBack,
     isExit,
+    isBundleDebug,
 } from '../lib/menu.js';
+import {bundle} from '../lib/bundle/bundle.js';
 
 const {log} = console;
 const {exit} = process;
@@ -192,6 +194,18 @@ async function uiLoop(arg) {
         
         done(`pack 'filesystem.red'`);
         process.exit();
+    }
+    
+    if (isBundleDebug(arg)) {
+        const entry = await askFilename();
+        
+        if (entry) {
+            const result = bundle(CWD, entry, filesystem);
+            await writeFile(join(CWD, 'bundle.js'), result);
+        }
+        
+        done(`pack 'filesystem.red'`);
+        return;
     }
     
     if (isScanDebug(arg)) {
