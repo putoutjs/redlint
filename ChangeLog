@@ -1,3 +1,16 @@
+2024.02.16, v3.12.0
+
+feature:
+- 0e4a700 redlint: @putout/plugin-nodejs v10.3.0
+- 00e2623 redlint: @putout/cli-choose v2.0.0
+- 564e8b5 bundle: add support of ESM
+- 5197b27 redlint: bundle: places -> filenames
+- d3f9973 bundle: parse-filenames
+- 9e36b3f bundle-files: add
+- a46c1e5 redlint: bundle: resolve-filenames: add
+- 77a997d redlint: @putout/operator-filesystem v4.0.1
+- 945beab redlint: add bundle
+
 2024.02.02, v3.11.2
 
 feature:
