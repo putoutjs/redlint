@@ -21,7 +21,9 @@
         "**/menu.js",
         "**/lint",
         "**/convert/index.js",
-        "**/version.js"
+        "**/version.js",
+        "**/example",
+        "**/bundle/bundle.js"
     ],
     "branches": 100,
     "lines": 100,

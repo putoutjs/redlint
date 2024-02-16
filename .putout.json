@@ -8,6 +8,8 @@
         "putout": "on"
     },
     "ignore": [
-        "!**/coverage"
+        "!**/coverage",
+        "example",
+        "bundle.spec.js"
     ]
 }
