@@ -204,7 +204,7 @@ async function uiLoop(arg) {
             await writeFile(join(CWD, 'bundle.js'), result);
         }
         
-        done(`pack 'filesystem.red'`);
+        done(`bundle 'bundle.js'`);
         return;
     }
     
