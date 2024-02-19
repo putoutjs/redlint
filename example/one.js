@@ -1,1 +1,3 @@
-module.exports = "hello";
+'use strict';
+
+module.exports = 'hello';

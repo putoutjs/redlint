@@ -1,5 +1,5 @@
 {
-  "rules": {
-    "nodejs/convert-commonjs-to-esm": "off"
-  }
+    "rules": {
+        "nodejs/convert-commonjs-to-esm": "off"
+    }
 }
