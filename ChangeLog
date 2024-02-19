@@ -1,3 +1,11 @@
+2024.02.19, v3.12.1
+
+feature:
+- 8772c48 redlint: @putout/plugin-nodejs v11.0.0
+- 7e558b7 redlint: rm unused mock-require
+- 4e18645 redlint: add ability to create a bundle file
+- e053ab9 redlint: bundle: resolve-filenames: integrate
+
 2024.02.16, v3.12.0
 
 feature:
