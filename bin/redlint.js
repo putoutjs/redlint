@@ -48,7 +48,7 @@ import {
     isExit,
     isBundleDebug,
 } from '../lib/menu.js';
-import {bundle} from '../lib/bundle/bundle.js';
+import {bundle} from '@putout/bundler';
 
 const {log} = console;
 const {exit} = process;

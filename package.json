@@ -30,6 +30,7 @@
     "report": "madrun report"
   },
   "dependencies": {
+    "@putout/bundler": "^1.0.0",
     "@putout/cli-choose": "^2.0.0",
     "@putout/cli-filesystem": "^2.0.1",
     "@putout/engine-runner": "^21.0.0",
@@ -38,7 +39,7 @@
     "@putout/operator-filesystem": "^4.0.1",
     "@putout/operator-json": "^2.0.0",
     "@putout/plugin-filesystem": "^4.0.0",
-    "@putout/plugin-nodejs": "^10.3.0",
+    "@putout/plugin-nodejs": "^11.0.0",
     "@putout/processor-filesystem": "^4.0.0",
     "chalk": "^5.3.0",
     "enquirer": "^2.4.1",
