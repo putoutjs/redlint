@@ -6,10 +6,13 @@ import {
     readFile,
     writeFile,
 } from 'node:fs/promises';
+
 import {lintJSON} from 'putout/lint/json';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
+import {isCI} from 'ci-info';
+
 import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
@@ -110,7 +113,7 @@ async function uiLoop(arg) {
     const CWD = process.cwd();
     const result = await buildTree(CWD);
     
-    spinner.succeed();
+    !isCI && spinner.succeed();
     
     if (isGenerateSimple(arg)) {
         await writeFile('.filesystem.json', lintJSON(stringify(convertToSimple(result))));
