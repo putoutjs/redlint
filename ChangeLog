@@ -1,3 +1,10 @@
+2024.03.01, v3.13.0
+
+feature:
+- fdd436e redlint: @putout/formatter-dump v5.0.0
+- 5a7667c redlint: @putout/formatter-codeframe v7.0.0
+- 7eb811e redlint: disable spinner on CI
+
 2024.02.19, v3.12.1
 
 feature:
