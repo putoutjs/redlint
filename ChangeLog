@@ -1,3 +1,9 @@
+2024.04.09, v3.14.0
+
+feature:
+- af1db00 redlint: eslint v9.0.0
+- 9d621ab redlint: @putout/plugin-filesystem v5.0.0
+
 2024.03.01, v3.13.1
 
 feature:
