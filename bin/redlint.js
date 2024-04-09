@@ -2,10 +2,7 @@
 
 import {join} from 'node:path';
 import process from 'node:process';
-import {
-    readFile,
-    writeFile,
-} from 'node:fs/promises';
+import {readFile, writeFile} from 'node:fs/promises';
 import {lintJSON} from 'putout/lint/json';
 import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
@@ -28,6 +25,7 @@ import {chooseConvert} from '../lib/convert/index.js';
 import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
+import {bundle} from '@putout/bundler';
 import {
     isScan,
     isScanDebug,
@@ -49,7 +47,6 @@ import {
     isExit,
     isBundleDebug,
 } from '../lib/menu.js';
-import {bundle} from '@putout/bundler';
 
 const {log} = console;
 const {exit} = process;
