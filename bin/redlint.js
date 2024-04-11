@@ -226,7 +226,7 @@ async function uiLoop(arg) {
     }
     
     if (isFixDebug(arg)) {
-        const places = lint(filesystem, {
+        const places = await lint(filesystem, {
             fix: true,
         });
         
