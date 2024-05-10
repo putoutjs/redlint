@@ -46,6 +46,7 @@ import {
     isBack,
     isExit,
     isBundleDebug,
+    isConvertRCToFlat,
 } from '../lib/menu.js';
 
 const {log} = console;
@@ -118,7 +119,10 @@ async function uiLoop(arg) {
     const filesystem = lintJSON(stringify(result));
     
     if (isConvertChosen(arg)) {
-        const filename = await askFilename();
+        let filename = '.eslintrc.json';
+        
+        if (!isConvertRCToFlat(arg))
+            filename = await askFilename();
         
         if (filename)
             await masterConvert(result.filename, arg, filesystem);
