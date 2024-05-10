@@ -1,3 +1,8 @@
+2024.05.10, v3.15.0
+
+feature:
+- 9ff3254 redlint: convert ESLint RC to Flat Config: add
+
 2024.04.11, v3.14.1
 
 fix:
