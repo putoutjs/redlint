@@ -1,3 +1,12 @@
+2024.08.28, v3.16.0
+
+feature:
+- 7dd97ae redlint: eslint-plugin-putout v23.0.0
+- f6157c1 redlint: @putout/test v11.0.0
+- d643f5a redlint: @putout/plugin-eslint v9.1.0
+- 359ac53 redlint: putout v36.3.1
+- 6890b82 redlint: c8 v10.1.2
+
 2024.05.10, v3.15.1
 
 fix:
