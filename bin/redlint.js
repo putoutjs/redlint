@@ -8,6 +8,7 @@ import formatterCodeFrame from '@putout/formatter-codeframe';
 import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
 import {isCI} from 'ci-info';
+import {bundle} from '@putout/bundler';
 import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
@@ -25,7 +26,6 @@ import {chooseConvert} from '../lib/convert/index.js';
 import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
-import {bundle} from '@putout/bundler';
 import {
     isScan,
     isScanDebug,
