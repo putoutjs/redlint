@@ -46,7 +46,7 @@
     "ci-info": "^4.0.0",
     "enquirer": "^2.4.1",
     "fullstore": "^3.0.0",
-    "ignore": "^5.2.4",
+    "ignore": "^6.0.2",
     "ora": "^8.0.1",
     "putout": "^37.0.1",
     "strip-ansi": "^7.1.0",
