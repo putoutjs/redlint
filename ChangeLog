@@ -1,3 +1,15 @@
+2024.12.13, v3.17.0
+
+feature:
+- bfc520b redlint: ignore v6.0.2
+- 69d78b2 redlint: @putout/processor-filesystem v5.0.0
+- 15df893 redlint: @putout/plugin-nodejs v12.0.1
+- 9e2683c redlint: @putout/plugin-filesystem v6.0.0
+- c8c1932 redlint: @putout/operator-filesystem v5.1.0
+- b52a07b redlint: @putout/engine-runner v22.0.4
+- 02d8f56 redlint: estree-to-babel v10.0.1
+- ff049b1 redlint: putout v37.0.1
+
 2024.08.28, v3.16.0
 
 feature:
