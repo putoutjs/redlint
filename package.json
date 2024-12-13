@@ -36,7 +36,7 @@
     "@putout/engine-runner": "^22.0.4",
     "@putout/formatter-codeframe": "^7.0.0",
     "@putout/formatter-dump": "^5.0.0",
-    "@putout/operator-filesystem": "^4.0.1",
+    "@putout/operator-filesystem": "^5.1.0",
     "@putout/operator-json": "^2.0.0",
     "@putout/plugin-eslint": "^9.1.0",
     "@putout/plugin-filesystem": "^5.0.0",
