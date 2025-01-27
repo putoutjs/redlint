@@ -23,6 +23,7 @@ import {debug} from '../lib/debug.js';
 import {logo} from '../lib/help/logo.js';
 import {version} from '../lib/cli/version.js';
 import {chooseConvert} from '../lib/convert/index.js';
+import {chooseRename} from '../lib/rename/index.js';
 import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
@@ -41,13 +42,17 @@ import {
     isVersion,
     isDebug,
     isConvert,
+    isRename,
     isConvertChosen,
+    isRenameToJsChosen,
+    isRenameToJsxChosen,
     isConvertChosenDebug,
     isBack,
     isExit,
     isBundleDebug,
-    isConvertRCToFlat,
+    isConvertRCToFlat, isRenameToJs,
 } from '../lib/menu.js';
+import {masterRename} from "../lib/rename/master.js";
 
 const {log} = console;
 const {exit} = process;
@@ -92,6 +97,9 @@ async function uiLoop(arg) {
     if (isConvert(arg))
         arg = await chooseConvert();
     
+    if (isRename(arg))
+        arg = await chooseRename();
+    
     if (isDebug(arg))
         arg = await debug();
     
@@ -127,6 +135,16 @@ async function uiLoop(arg) {
         if (filename)
             await masterConvert(result.filename, arg, filesystem);
         
+        return;
+    }
+    
+    if (isRenameToJsChosen(arg)) {
+        await masterRename('*.jsx', arg, filesystem);
+        return;
+    }
+    
+    if (isRenameToJsxChosen(arg)) {
+        await masterRename('*.js', arg, filesystem);
         return;
     }
     
