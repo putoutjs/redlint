@@ -27,6 +27,7 @@ import {chooseRename} from '../lib/rename/index.js';
 import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
+import {masterRename} from '../lib/rename/master.js';
 import {
     isScan,
     isScanDebug,
@@ -50,9 +51,8 @@ import {
     isBack,
     isExit,
     isBundleDebug,
-    isConvertRCToFlat, isRenameToJs,
+    isConvertRCToFlat,
 } from '../lib/menu.js';
-import {masterRename} from "../lib/rename/master.js";
 
 const {log} = console;
 const {exit} = process;

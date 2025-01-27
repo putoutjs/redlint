@@ -1,3 +1,9 @@
+2025.01.27, v3.18.0
+
+feature:
+- cb83eaf redlint: rename to jsx: add
+- 80584df redlint: @putout/plugin-eslint v10.0.0
+
 2025.01.21, v3.17.2
 
 feature:
