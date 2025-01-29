@@ -21,6 +21,7 @@
         "**/menu.js",
         "**/lint",
         "**/convert/index.js",
+        "**/rename/index.js",
         "**/version.js",
         "**/example",
         "**/bundle/bundle.js",
