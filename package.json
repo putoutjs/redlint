@@ -39,7 +39,7 @@
     "@putout/operator-filesystem": "^6.0.2",
     "@putout/operator-json": "^2.0.0",
     "@putout/plugin-eslint": "^10.0.0",
-    "@putout/plugin-filesystem": "^7.0.0",
+    "@putout/plugin-filesystem": "^8.0.1",
     "@putout/plugin-nodejs": "^13.1.1",
     "@putout/plugin-react": "^2.0.1",
     "@putout/processor-filesystem": "^5.0.0",
