@@ -1,3 +1,11 @@
+2025.02.11, v3.19.0
+
+feature:
+- 0ffb405 redlint: @putout/plugin-nodejs v14.0.1
+- 7569ebe redlint: @putout/plugin-filesystem v8.0.1
+- 43b2bc3 redlint: @putout/operator-filesystem v6.0.2
+- 2a00aac redlint: @putout/engine-runner v23.0.5
+
 2025.01.29, v3.18.1
 
 feature:
