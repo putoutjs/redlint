@@ -33,7 +33,7 @@
     "@putout/bundler": "^1.0.0",
     "@putout/cli-choose": "^2.0.0",
     "@putout/cli-filesystem": "^2.0.1",
-    "@putout/engine-runner": "^22.0.4",
+    "@putout/engine-runner": "^23.0.5",
     "@putout/formatter-codeframe": "^8.0.0",
     "@putout/formatter-dump": "^5.0.0",
     "@putout/operator-filesystem": "^5.1.0",
