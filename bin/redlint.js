@@ -28,6 +28,7 @@ import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
+import {edit} from '../lib/edit/edit.js';
 import {
     isScan,
     isScanDebug,
@@ -52,6 +53,7 @@ import {
     isExit,
     isBundleDebug,
     isConvertRCToFlat,
+    isEdit,
 } from '../lib/menu.js';
 
 const {log} = console;
@@ -59,7 +61,7 @@ const {exit} = process;
 
 const {stringify} = JSON;
 
-const [arg] = process.argv.slice(2);
+const [arg, ...argOptions] = process.argv.slice(2);
 let header = true;
 
 await uiLoop(arg);
@@ -125,6 +127,21 @@ async function uiLoop(arg) {
     }
     
     const filesystem = lintJSON(stringify(result));
+    
+    if (isEdit(arg)) {
+        const spinner = ora(`🪶edit filesystem`).start();
+        const args = argOptions.join('');
+        const recursive = /-r|--recursive/.test(args);
+        const full = /-f|--full/.test(args);
+        
+        spinner.succeed();
+        return edit(filesystem, {
+            dir: CWD,
+            type: 'rename',
+            full,
+            recursive,
+        });
+    }
     
     if (isConvertChosen(arg)) {
         let filename = '.eslintrc.json';
