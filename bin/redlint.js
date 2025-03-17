@@ -131,7 +131,7 @@ async function uiLoop(arg) {
     if (isEdit(arg)) {
         const spinner = ora(`🪶edit filesystem`).start();
         const args = argOptions.join('');
-        const recursive = /-r|--recursive/.test(args);
+        const nested = /-n|--nested/.test(args);
         const full = /-f|--full/.test(args);
         
         spinner.succeed();
@@ -139,7 +139,7 @@ async function uiLoop(arg) {
             dir: CWD,
             type: 'rename',
             full,
-            recursive,
+            nested,
         });
     }
     
