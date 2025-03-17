@@ -1,3 +1,9 @@
+2025.03.17, v3.22.0
+
+feature:
+- 9224a78 edit: rename: full
+- 78d6cb6 redlint: edit: rename-files-full: add
+
 2025.03.13, v3.21.3
 
 feature:
