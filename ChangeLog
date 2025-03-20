@@ -1,3 +1,8 @@
+2025.03.20, v3.22.6
+
+feature:
+- 7125219 redlint: speed up reading names
+
 2025.03.20, v3.22.5
 
 fix:
