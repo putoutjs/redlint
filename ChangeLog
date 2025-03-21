@@ -1,3 +1,9 @@
+2025.03.21, v4.0.0
+
+feature:
+- d28a461 redlint: putout v39.0.0
+- 676440c redlint: drop support of node < 20
+
 2025.03.20, v3.22.6
 
 feature:
