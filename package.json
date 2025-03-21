@@ -63,7 +63,7 @@
     "generate"
   ],
   "devDependencies": {
-    "@putout/eslint-flat": "^2.0.0",
+    "@putout/eslint-flat": "^3.0.0",
     "@putout/test": "^12.0.1",
     "c8": "^10.1.2",
     "eslint": "^9.0.0",
@@ -78,7 +78,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "publishConfig": {
     "access": "public"
