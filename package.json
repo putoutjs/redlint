@@ -30,7 +30,7 @@
     "report": "madrun report"
   },
   "dependencies": {
-    "@putout/bundler": "^1.0.0",
+    "@putout/bundler": "^2.0.0",
     "@putout/cli-choose": "^2.0.0",
     "@putout/cli-filesystem": "^2.0.1",
     "@putout/engine-runner": "^23.0.5",
