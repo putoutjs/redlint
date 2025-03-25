@@ -1,3 +1,10 @@
+2025.03.25, v4.0.1
+
+feature:
+- 7b91d13 redlint: @putout/bundler v2.0.0
+- bdd7e84 redlint: eslint-plugin-putout v26.0.2
+- 5a23aea redlint: madrun v11.0.0
+
 2025.03.21, v4.0.0
 
 feature:
