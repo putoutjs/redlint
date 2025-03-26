@@ -1,3 +1,16 @@
+2025.03.26, v4.1.0
+
+feature:
+- abb6d6d redlint: iterator map ponyfill
+- c7cd9de redlint: supertape v11.0.4
+- 9767b36 redlint: @putout/test v13.0.0
+- d33317e redlint: @putout/processor-filesystem v6.0.0
+- e0d233f redlint: @putout/plugin-nodejs v15.2.0
+- c1fa6ed redlint: @putout/plugin-filesystem v9.0.1
+- de816ec redlint: @putout/plugin-eslint v13.0.1
+- 9b17157 redlint: @putout/operator-filesystem v7.0.0
+- a8e5851 redlint: @putout/engine-runner v24.0.2
+
 2025.03.25, v4.0.1
 
 feature:
