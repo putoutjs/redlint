@@ -38,7 +38,7 @@
     "@putout/formatter-dump": "^5.0.0",
     "@putout/operator-filesystem": "^7.0.0",
     "@putout/operator-json": "^2.0.0",
-    "@putout/plugin-eslint": "^12.1.0",
+    "@putout/plugin-eslint": "^13.0.1",
     "@putout/plugin-filesystem": "^8.0.1",
     "@putout/plugin-nodejs": "^14.0.1",
     "@putout/plugin-react": "^2.0.1",
