@@ -1,3 +1,10 @@
+2025.04.08, v4.2.0
+
+feature:
+- d82f0fd redlint: putout v40.0.0
+- efd6898 redlint: @putout/plugin-react v3.0.0
+- d39528a redlint: estree-to-babel v11.0.2
+
 2025.03.26, v4.1.1
 
 fix:
