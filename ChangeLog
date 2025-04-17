@@ -1,3 +1,9 @@
+2025.04.17, v4.2.1
+
+feature:
+- b205f95 redlint: @putout/operator-filesystem v8.0.0
+- 35dd7c7 redlint: @putout/plugin-filesystem v10.0.0
+
 2025.04.08, v4.2.0
 
 feature:
