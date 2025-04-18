@@ -1,4 +1,5 @@
 .*
+.swo
 *.spec.js
 test
 yarn-error.log
