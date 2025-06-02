@@ -1,3 +1,12 @@
+2025.06.02, v4.2.3
+
+feature:
+- 890a425 redlint: @putout/processor-filesystem v7.0.1
+- c34f15d redlint: @putout/plugin-filesystem v11.0.1
+- e1446f8 redlint: @putout/operator-filesystem v9.0.1
+- f86ec7d redlint: @putout/formatter-codeframe v9.0.0
+- 0290d4e redlint: @putout/engine-runner v25.0.3
+
 2025.05.29, v4.2.2
 
 feature:
