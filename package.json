@@ -40,7 +40,7 @@
     "@putout/operator-json": "^2.0.0",
     "@putout/plugin-eslint": "^14.0.1",
     "@putout/plugin-filesystem": "^11.0.1",
-    "@putout/plugin-nodejs": "^16.3.0",
+    "@putout/plugin-nodejs": "^17.0.0",
     "@putout/plugin-react": "^3.0.0",
     "@putout/processor-filesystem": "^7.0.1",
     "chalk": "^5.3.0",
