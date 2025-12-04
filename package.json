@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@putout/bundler": "^3.0.0",
-    "@putout/cli-choose": "^2.0.0",
+    "@putout/cli-choose": "^3.0.0",
     "@putout/cli-filesystem": "^2.0.1",
     "@putout/engine-runner": "^25.0.3",
     "@putout/formatter-codeframe": "^9.0.0",
