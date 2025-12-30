@@ -51,7 +51,7 @@
     "ignore": "^7.0.0",
     "obligator": "^3.0.0",
     "ora": "^9.0.0",
-    "putout": "^41.0.0",
+    "putout": "^41.2.0",
     "strip-ansi": "^7.1.0",
     "try-to-catch": "^3.0.1"
   },
