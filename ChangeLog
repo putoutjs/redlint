@@ -1,3 +1,8 @@
+2025.12.31, v5.0.0
+
+feature:
+- 0dacbf6 redlint: drop support of node < 22
+
 2025.12.31, v4.4.2
 
 feature:
