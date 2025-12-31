@@ -1,3 +1,9 @@
+2025.12.31, v5.0.1
+
+feature:
+- b0483dc redlint: @putout/test v15.0.0
+- 220e528 redlint: get rid of es-iterator-helpers
+
 2025.12.31, v5.0.0
 
 feature:
