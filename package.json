@@ -46,7 +46,6 @@
     "chalk": "^5.3.0",
     "ci-info": "^4.0.0",
     "enquirer": "^2.4.1",
-    "es-iterator-helpers": "^1.2.1",
     "fullstore": "^3.0.0",
     "ignore": "^7.0.0",
     "obligator": "^3.0.0",
