@@ -1,3 +1,10 @@
+2026.01.03, v5.0.2
+
+feature:
+- d56b2f3 redlint: @putout/engine-runner v27.0.0
+- f38b3b2 redlint: @putout/bundler v4.0.0
+- 04a9d3f redlint: madrun v12.0.0
+
 2025.12.31, v5.0.1
 
 feature:
