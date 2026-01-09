@@ -1,3 +1,10 @@
+2026.01.09, v5.0.3
+
+feature:
+- 6ad73f9 redlint: supertape v12.0.7
+- 8a1ebda redlint: estree-to-babel: remove unused
+- 614bec6 redlint: @putout/operator-json v3.1.0
+
 2026.01.03, v5.0.2
 
 feature:
