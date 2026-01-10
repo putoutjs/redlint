@@ -56,6 +56,23 @@ To fix your files use `redlint fix`:
 
 You can also generate `.filesystem.json` file with `putout generate`.
 
+## How to add a new rule?
+
+To add new rule `create-file` located in plugin `custom` for **RedLint** write a new 🐊**Putout** rule [Scanner](https://github.com/coderaiser/putout/tree/master/packages/engine-runner#scanner). And add it to `.putout.json`:
+
+```js
+{
+    "match": {
+        ".filesystem": {
+            "custom/create-file": "on"
+        }
+    }
+    "plugins": [
+        "custom"
+     ]
+}
+```
+
 ## License
 
 MIT
