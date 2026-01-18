@@ -60,16 +60,14 @@ You can also generate `.filesystem.json` file with `putout generate`.
 
 To add new rule `create-file` located in plugin `custom` for **RedLint** write a new 🐊**Putout** rule [Scanner](https://github.com/coderaiser/putout/tree/master/packages/engine-runner#scanner). And add it to `.putout.json`:
 
-```js
+```json
 {
     "match": {
         ".filesystem": {
             "custom/create-file": "on"
         }
-    }
-    "plugins": [
-        "custom"
-     ]
+    },
+    "plugins": ["custom"]
 }
 ```
 
