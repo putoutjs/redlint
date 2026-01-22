@@ -29,6 +29,7 @@ import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
 import {edit} from '../lib/edit/edit.js';
+import {view} from '../lib/view/view.js';
 import {
     isScan,
     isScanDebug,
@@ -54,6 +55,7 @@ import {
     isBundleDebug,
     isConvertRCToFlat,
     isEdit,
+    isView,
 } from '../lib/menu.js';
 
 const {log} = console;
@@ -127,6 +129,16 @@ async function uiLoop(arg) {
     }
     
     const filesystem = lintJSON(stringify(result));
+    
+    if (isView(arg)) {
+        const spinner = ora(`🔮 view`).start();
+        const filename = argOptions.join('');
+        
+        spinner.succeed();
+        
+        console.log(`\n${view(filename)}`);
+        return;
+    }
     
     if (isEdit(arg)) {
         const spinner = ora(`🪶edit filesystem`).start();

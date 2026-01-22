@@ -30,6 +30,7 @@
     "report": "madrun report"
   },
   "dependencies": {
+    "@putout/babel": "^5.2.3",
     "@putout/bundler": "^4.0.0",
     "@putout/cli-choose": "^3.0.0",
     "@putout/cli-filesystem": "^3.0.0",
@@ -45,6 +46,7 @@
     "@putout/processor-filesystem": "^7.0.1",
     "chalk": "^5.3.0",
     "ci-info": "^4.0.0",
+    "dedent": "^1.7.1",
     "enquirer": "^2.4.1",
     "fullstore": "^4.0.0",
     "ignore": "^7.0.0",
