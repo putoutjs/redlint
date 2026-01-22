@@ -1,3 +1,10 @@
+2026.01.22, v5.1.0
+
+feature:
+- a2d9c57 redlint: view: add
+- d2dbad3 redlint: do not rename when different lengths
+- a7fe951 redlint: eslint-plugin-putout v30.0.0
+
 2026.01.18, v5.0.5
 
 feature:
