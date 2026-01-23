@@ -149,8 +149,12 @@ async function uiLoop(arg) {
         
         spinner.succeed();
         
-        console.log(test(filesystem));
+        const [error, result] = test(filesystem);
         
+        if (error)
+            return console.error('\n🌴 ' + error.message + '');
+        
+        console.log(result);
         return;
     }
     
