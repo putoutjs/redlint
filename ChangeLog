@@ -1,3 +1,9 @@
+2026.01.24, v5.2.1
+
+feature:
+- 52a7c5f redlint: test: init-fixture: add
+- eac41aa test: no index.spec.js
+
 2026.01.23, v5.2.0
 
 feature:
