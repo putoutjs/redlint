@@ -10,3 +10,4 @@ fixture.js
 rules
 filesystem.red
 *.config.*
+!lib/test

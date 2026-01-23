@@ -30,6 +30,7 @@ import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
 import {edit} from '../lib/edit/edit.js';
 import {view} from '../lib/view/view.js';
+import {test} from '../lib/test/test.js';
 import {
     isScan,
     isScanDebug,
@@ -56,6 +57,9 @@ import {
     isConvertRCToFlat,
     isEdit,
     isView,
+    VIEW,
+    TEST,
+    isTest,
 } from '../lib/menu.js';
 
 const {log} = console;
@@ -119,24 +123,34 @@ async function uiLoop(arg) {
     log('Running:');
     const spinner = ora('index filesystem').start();
     const CWD = process.cwd();
-    const result = await buildTree(CWD);
+    const fileTree = await buildTree(CWD);
     
     !isCI && spinner.succeed();
     
     if (isGenerateSimple(arg)) {
-        await writeFile('.filesystem.json', lintJSON(stringify(convertToSimple(result))));
+        await writeFile('.filesystem.json', lintJSON(stringify(convertToSimple(fileTree))));
         process.exit(0);
     }
     
-    const filesystem = lintJSON(stringify(result));
+    const filesystem = lintJSON(stringify(fileTree));
     
     if (isView(arg)) {
-        const spinner = ora(`🔮 view`).start();
+        const spinner = ora(VIEW).start();
         const filename = argOptions.join('');
         
         spinner.succeed();
         
         console.log(`\n${view(filename)}`);
+        return;
+    }
+    
+    if (isTest(arg)) {
+        const spinner = ora(TEST).start();
+        
+        spinner.succeed();
+        
+        console.log(test(filesystem));
+        
         return;
     }
     
@@ -162,7 +176,7 @@ async function uiLoop(arg) {
             filename = await askFilename();
         
         if (filename)
-            await masterConvert(result.filename, arg, filesystem);
+            await masterConvert(fileTree.filename, arg, filesystem);
         
         return;
     }
