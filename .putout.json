@@ -4,7 +4,6 @@
         "filesystem/remove-files": ["on", {
             "names": ["coverage"]
         }],
-        "remove-console": "off",
         "putout": "on"
     },
     "ignore": [

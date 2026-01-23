@@ -74,6 +74,7 @@ To add new rule `create-file` located in plugin `custom` for **RedLint** write a
 ## Test
 
 - ✅ [get fiture names from `index.spec.js`](https://putout.cloudcmd.io/#/gist/558b38ed5e5e662706f1b8a49a0157a1/8e188e99798246263dbf488b86dc250b8dfa1be3).
+- ✅ [init fixture](https://putout.cloudcmd.io/#/gist/e7614e03b3292a210cfc63265718e955/13ccc3a90a8d9ff28f26474b107c5652928e8d0a);
 
 ## License
 
