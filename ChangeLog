@@ -1,3 +1,8 @@
+2026.01.24, v5.2.3
+
+feature:
+- 18761b3 test: show correct/incorrect only when different
+
 2026.01.24, v5.2.2
 
 feature:
