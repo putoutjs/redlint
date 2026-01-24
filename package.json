@@ -50,6 +50,7 @@
     "enquirer": "^2.4.1",
     "fullstore": "^4.0.0",
     "ignore": "^7.0.0",
+    "jest-diff": "^30.2.0",
     "obligator": "^3.0.0",
     "ora": "^9.0.0",
     "putout": "^41.2.0",
