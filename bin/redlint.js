@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {join} from 'node:path';
-import process from 'node:process';
+import process, {stdout} from 'node:process';
 import {readFile, writeFile} from 'node:fs/promises';
 import {lintJSON} from 'putout/lint/json';
 import formatterCodeFrame from '@putout/formatter-codeframe';
@@ -154,7 +154,7 @@ async function uiLoop(arg) {
         if (error)
             return console.error('\n🌴 ' + error.message + '');
         
-        console.log(result);
+        stdout.write(result);
         return;
     }
     
@@ -331,3 +331,4 @@ function done(message) {
     const spinner = ora(message).start();
     spinner.succeed();
 }
+
