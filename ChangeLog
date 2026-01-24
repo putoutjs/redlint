@@ -1,3 +1,10 @@
+2026.01.24, v5.2.2
+
+feature:
+- aeb6b12 redlint: test: run
+- 9db12a6 redlint: @putout/plugin-nodejs v20.0.0
+- 026f9b7 redlint: test: readFixture: add
+
 2026.01.24, v5.2.1
 
 feature:
