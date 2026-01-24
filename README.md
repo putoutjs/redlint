@@ -73,11 +73,16 @@ To add new rule `create-file` located in plugin `custom` for **RedLint** write a
 
 ## Test
 
-- ✅ [get fiture names from `index.spec.js`](https://putout.cloudcmd.io/#/gist/558b38ed5e5e662706f1b8a49a0157a1/8e188e99798246263dbf488b86dc250b8dfa1be3).
+- ✅ [get fixture names from `index.spec.js`](https://putout.cloudcmd.io/#/gist/558b38ed5e5e662706f1b8a49a0157a1/8e188e99798246263dbf488b86dc250b8dfa1be3).
 - ✅ [init fixture](https://putout.cloudcmd.io/#/gist/e7614e03b3292a210cfc63265718e955/13ccc3a90a8d9ff28f26474b107c5652928e8d0a);
 - ✅ [read fixture](https://putout.cloudcmd.io/#/gist/f8ab318fa1963508322031483d988ad4/b152c5f796bfab9aa74594c847ddbd1f650efb83);
 - ✅ [run plugin](https://putout.cloudcmd.io/#/gist/8e66e45753dbe9e746c797813eb2723a/9855f9aea57f345492c629c65d9972309d250a91);
 - ✅ [get file name with content](https://putout.cloudcmd.io/#/gist/30721329e845f61c0c6105105bdffbdc);
+
+When you writing a rule for **RedLint** you can run tests with `redlint test`.
+Here is how it looks like:
+<img width="393" height="290" alt="image" src="https://github.com/user-attachments/assets/17f3bbb2-98aa-415e-b8e3-2065fef87261" />
+
 
 ## License
 
