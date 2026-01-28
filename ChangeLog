@@ -1,3 +1,8 @@
+2026.01.28, v5.3.2
+
+feature:
+- 8fc14f3 redlint: @putout/cli-choose v4.0.0
+
 2026.01.24, v5.3.1
 
 feature:
