@@ -39,6 +39,35 @@ To scan your files use `redlint scan`:
 
 <img width="718" alt="image" src="https://github.com/putoutjs/redlint/assets/1573141/58672a61-4408-4c1e-ab75-2fbcca7f225d">
 
+## Rules
+
+- ✅ [`madrun/rename-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-madrun#rename-file);
+- ✅ [`package-json/find-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-package-json#find-file);
+- ✅ [`package-json/remove-exports-with-missing-files`](https://github.com/coderaiser/putout/tree/master/packages/plugin-package-json#remove-exports-with-missing-files);
+- ✅ [`esm/resolve-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#resolve-imported-file);
+- ✅ [`esm/shorten-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#shorten-imported-file);
+- ✅ [`esm/apply-name-to-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#apply-name-to-imported-file);
+- ✅ [`esm/apply-namespace-to-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#apply-name-to-imported-file);
+- ✅ [`esm/apply-privately-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#apply-privately-imported-file);
+- ✅ [`esm/apply-js-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#apply-js-imported-file);
+- ✅ [`putout-config/remove-empty-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-putout-config#remove-empty-file);
+- ✅ [`typescript/find-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-typescript#find-file);
+- ✅ [`typescript/cts-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-typescript#cts-file);
+- ✅ [`typescript/mts-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-typescript#mts-file);
+- ✅ [`typescript/rename-file-cts-to-ts`](https://github.com/coderaiser/putout/tree/master/packages/plugin-typescript#rename-file-cts-to-ts);
+- ✅ [`typescript/rename-file-mts-to-ts`](https://github.com/coderaiser/putout/tree/master/packages/plugin-typescript#rename-file-mts-to-ts);
+- ✅ [`nodejs/apply-privately-required-files`](https://github.com/coderaiser/putout/tree/master/packages/plugin-nodejs#apply-privately-required-files`);
+- ✅ [`nodejs/cjs-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-nodejs#cjs-file`);
+- ✅ [`nodejs/mjs-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-nodejs#mjs-file`);
+- ✅ [`nodejs/rename-file-cjs-to-js`](https://github.com/coderaiser/putout/tree/master/packages/plugin-nodejs#rename-file-cjs-to-js`);
+- ✅ [`nodejs/rename-file-mjs-to-js`](https://github.com/coderaiser/putout/tree/master/packages/plugin-nodejs#rename-file-mjs-to-js`);
+- ✅ [`filesystem/remove-vim-swap-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem#remove-vim-swap-file`);
+- ✅ [`filesystem/remove-files`](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem#remove-files`);
+- ✅ [`filesystem/remove-nyc-output-files`](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem#remove-nyc-output-file`);
+- ✅ [`filesystem/remove-travis-yml-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem#remove-travis-yml-file`);
+- ✅ [`filesystem/remove-empty-directory`](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem#remove-empty-directory`);
+- ✅ [`filesystem/remove-ds-store-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem#remove-ds-store-file`);
+
 ## Convert
 
 To convert file to **JSON** or **JavaScript** use:
