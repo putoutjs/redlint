@@ -9,6 +9,7 @@ import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
 import {isCI} from 'ci-info';
 import {bundle} from '@putout/bundler';
+import {edit, editHelp} from '#edit';
 import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
 import {buildTree} from '../lib/redlint.js';
@@ -28,7 +29,6 @@ import {convert} from '../lib/convert/convert.js';
 import {masterConvert} from '../lib/convert/master.js';
 import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
-import {edit} from '../lib/edit/edit.js';
 import {view} from '../lib/view/view.js';
 import {test} from '../lib/test/test.js';
 import {
@@ -159,12 +159,19 @@ async function uiLoop(arg) {
     }
     
     if (isEdit(arg)) {
-        const spinner = ora(`🪶edit filesystem`).start();
         const args = argOptions.join('');
         const nested = /-n|--nested/.test(args);
         const full = /-f|--full/.test(args);
+        const isHelp = /-h|--help/.test(args);
         
+        if (isHelp) {
+            editHelp();
+            return;
+        }
+        
+        const spinner = ora(`🪶edit filesystem`).start();
         spinner.succeed();
+        
         return edit(filesystem, {
             dir: CWD,
             type: 'rename',
