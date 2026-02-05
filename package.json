@@ -51,6 +51,7 @@
     "fullstore": "^4.0.0",
     "ignore": "^7.0.0",
     "jest-diff": "^30.2.0",
+    "montag": "^1.2.1",
     "obligator": "^3.0.0",
     "ora": "^9.0.0",
     "putout": "^41.2.0",
@@ -73,7 +74,6 @@
     "eslint-plugin-putout": "^30.0.0",
     "just-kebab-case": "^4.2.0",
     "madrun": "^12.0.0",
-    "montag": "^1.0.0",
     "nodemon": "^3.0.1",
     "supertape": "^12.0.7"
   },
