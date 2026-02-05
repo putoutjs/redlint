@@ -162,9 +162,10 @@ async function uiLoop(arg) {
         const args = argOptions.join('');
         const nested = /-n|--nested/.test(args);
         const full = /-f|--full/.test(args);
-        const isHelp = /-h|--help/.test(args);
+        const help = /-h|--help/.test(args);
+        const remove = /-r|--remove/.test(args);
         
-        if (isHelp) {
+        if (help) {
             editHelp();
             return;
         }
@@ -177,6 +178,7 @@ async function uiLoop(arg) {
             type: 'rename',
             full,
             nested,
+            remove,
         });
     }
     
