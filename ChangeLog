@@ -1,3 +1,8 @@
+2026.02.05, v5.4.1
+
+feature:
+- e327c9f redlint: -h, --help
+
 2026.01.30, v5.4.0
 
 feature:
