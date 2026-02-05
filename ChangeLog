@@ -1,3 +1,9 @@
+2026.02.05, v5.5.0
+
+feature:
+- ddcba17 redlint: edit: remove: add
+- df9882c edit: rename-files: do not try to rename when has empty lines
+
 2026.02.05, v5.4.2
 
 feature:

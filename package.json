@@ -1,6 +1,6 @@
 {
   "name": "redlint",
-  "version": "5.4.2",
+  "version": "5.5.0",
   "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Lint Filesystem with 🐊Putout",
