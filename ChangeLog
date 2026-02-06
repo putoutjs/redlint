@@ -1,3 +1,8 @@
+2026.02.06, v5.6.0
+
+feature:
+- 7731f88 redlint: edit: remove-files: show removed files
+
 2026.02.05, v5.5.0
 
 feature:
