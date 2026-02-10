@@ -73,7 +73,7 @@
   "devDependencies": {
     "@putout/test": "^15.0.0",
     "c8": "^10.1.2",
-    "eslint": "^9.0.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-putout": "^30.0.0",
     "just-kebab-case": "^4.2.0",
     "madrun": "^12.0.0",
