@@ -1,5 +1,6 @@
 import {stripVTControlCharacters} from 'node:util';
 import {extend} from 'supertape';
+
 export {stub} from 'supertape';
 
 const trimEnd = (a) => a.trimEnd();
@@ -25,4 +26,3 @@ export const test = extend({
         return operator.equal(result, b);
     },
 });
-
