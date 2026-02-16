@@ -1,3 +1,12 @@
+2026.02.16, v6.0.0
+
+feature:
+- 5649d46 redlint: putout v42.0.0
+- 852a5b4 redlint: eslint-plugin-putout v31.0.0
+- e7d77ca redlint: @putout/plugin-filesystem v13.0.0
+- 7b351a6 redlint: @putout/engine-runner v28.0.0
+- d753237 redlint: eslint v10.0.0
+
 2026.02.07, v5.7.0
 
 feature:
