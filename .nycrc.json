@@ -4,7 +4,6 @@
     "exclude": [
         "**/*.spec.*",
         "**/fixture",
-        "test",
         "**/debug.js",
         "**/dialog.js",
         "**/coverage",
@@ -25,7 +24,8 @@
         "**/version.js",
         "**/example",
         "**/bundle/bundle.js",
-        "**/*.config.*"
+        "**/*.config.*",
+        "test"
     ],
     "branches": 100,
     "lines": 100,

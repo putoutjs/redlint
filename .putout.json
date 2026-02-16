@@ -7,8 +7,8 @@
         "putout": "on"
     },
     "ignore": [
+        "bundle.js",
         "!**/coverage",
-        "example",
-        "bundle.js"
+        "example"
     ]
 }

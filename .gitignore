@@ -1,9 +1,12 @@
-node_modules
 *.swp
-yarn-error.log
+*.log
+*.lock
 
-coverage
 .idea
 .filesystem.json
+
 filesystem.red
 bundle.js
+
+node_modules
+coverage
