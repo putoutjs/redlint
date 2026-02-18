@@ -1,3 +1,9 @@
+2026.02.19, v6.1.0
+
+feature:
+- 1199851 redlint: madrun v13.0.0
+- 99a77f5 redlint: remove-files: simplify
+
 2026.02.16, v6.0.0
 
 feature:
