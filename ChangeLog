@@ -1,3 +1,8 @@
+2026.02.19, v6.1.1
+
+feature:
+- 689a065 redlint: @putout/plugin-nodejs v21.0.0
+
 2026.02.19, v6.1.0
 
 feature:
