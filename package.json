@@ -40,7 +40,7 @@
     "@putout/cli-filesystem": "^3.0.0",
     "@putout/engine-runner": "^28.0.0",
     "@putout/formatter-codeframe": "^10.0.0",
-    "@putout/formatter-dump": "^6.1.0",
+    "@putout/formatter-dump": "^7.0.0",
     "@putout/operator-filesystem": "^11.0.0",
     "@putout/operator-json": "^3.1.0",
     "@putout/plugin-eslint": "^15.0.0",
