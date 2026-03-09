@@ -71,6 +71,7 @@
   ],
   "devDependencies": {
     "@putout/test": "^15.0.0",
+    "@supertape/operator-strip": "^1.0.0",
     "eslint": "^10.0.0",
     "eslint-plugin-putout": "^31.0.0",
     "just-kebab-case": "^4.2.0",
