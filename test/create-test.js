@@ -1,4 +1,3 @@
-import {stripVTControlCharacters} from 'node:util';
 import {extend} from 'supertape';
 import * as strip from '@supertape/operator-strip';
 
