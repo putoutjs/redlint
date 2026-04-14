@@ -10,7 +10,8 @@
     "redlint": "bin/redlint.js"
   },
   "exports": {
-    ".": "./lib/redlint.js"
+    ".": "./lib/redlint.js",
+    "./simple": "./lib/simple.js"
   },
   "imports": {
     "#edit": "./lib/edit/edit.js",
