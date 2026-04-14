@@ -111,6 +111,26 @@ To add new rule `create-file` located in plugin `custom` for **RedLint** write a
 When you writing a rule for **RedLint** you can run tests with `redlint test`.
 Here is how it looks like: <img width="393" height="290" alt="image" src="https://github.com/user-attachments/assets/17f3bbb2-98aa-415e-b8e3-2065fef87261" />
 
+## Pack
+
+```sh
+redlint pack
+```
+
+Will produce file `filesystem.red` with content of current directory
+
+## Extract
+
+```sh
+redlint extract
+```
+
+Will extract `filesystem.red` to current directory. Also works from stdin:
+
+```sh
+cat ../../filesystem.red | redlint extract
+```
+
 ## License
 
 MIT
