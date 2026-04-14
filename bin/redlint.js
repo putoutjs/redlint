@@ -61,6 +61,7 @@ import {
     TEST,
     isTest,
 } from '../lib/menu.js';
+import {readStdin} from './read-stdin.js';
 
 const {log} = console;
 const {exit} = process;
@@ -247,7 +248,7 @@ async function uiLoop(arg) {
     }
     
     if (isExtract(arg)) {
-        const filesystem = await readFile(join(CWD, 'filesystem.red'), 'utf8');
+        const filesystem = await readStdin() || await readFile(join(CWD, 'filesystem.red'), 'utf8');
         await masterExtract(CWD, filesystem);
         const spinner = ora(`extract 'filesystem.red'`).start();
         

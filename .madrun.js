@@ -4,7 +4,7 @@ const env = {};
 
 export default {
     'wisdom': () => run('lint'),
-    'test': () => [env, `tape 'lib/**/*.spec.js' test/*.js 'rules/**/*.spec.js'`],
+    'test': () => [env, `tape '{bin,lib}/**/*.spec.js' test/*.js 'rules/**/*.spec.js'`],
     'test:dts': () => 'check-dts test/*.ts',
     'watch:test': async () => [env, `nodemon -w lib -w test -x ${await cutEnv('test')}`],
     'lint': () => `putout .`,
