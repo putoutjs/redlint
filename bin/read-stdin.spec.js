@@ -75,4 +75,3 @@ test('redlint: read-stdout: isTTY', async (t) => {
     t.notOk(result);
     t.end();
 });
-

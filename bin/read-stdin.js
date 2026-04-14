@@ -3,6 +3,7 @@ import process from 'node:process';
 
 export const readStdin = promisify((overrides, fn) => {
     const {stdin} = fn ? overrides : process;
+    
     fn = fn || overrides;
     
     stdin.setEncoding('utf8');
