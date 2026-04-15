@@ -9,6 +9,7 @@ import formatterDump from '@putout/formatter-dump';
 import ora from 'ora';
 import {isCI} from 'ci-info';
 import {bundle} from '@putout/bundler';
+import {readStdin} from 'redstd';
 import {edit, editHelp} from '#edit';
 import {help} from '../lib/help/help.js';
 import {choose} from '../lib/choose.js';
@@ -61,7 +62,6 @@ import {
     TEST,
     isTest,
 } from '../lib/menu.js';
-import {readStdin} from './read-stdin.js';
 
 const {log} = console;
 const {exit} = process;
