@@ -1,3 +1,10 @@
+2026.05.04, v6.5.0
+
+feature:
+- 50ca776 redlint: @putout/plugin-react v4.0.1
+- 5a7ae00 redlint: montag v2.0.1
+- d9736f6 redlint: view: no file found
+
 2026.04.15, v6.4.1
 
 feature:
