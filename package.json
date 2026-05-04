@@ -56,7 +56,7 @@
     "fullstore": "^4.0.0",
     "ignore": "^7.0.0",
     "jest-diff": "^30.2.0",
-    "montag": "^1.2.1",
+    "montag": "^2.0.1",
     "ora": "^9.0.0",
     "putout": "^42.0.0",
     "redstd": "^1.0.0",
