@@ -60,6 +60,7 @@
     "ora": "^9.0.0",
     "putout": "^42.0.0",
     "redstd": "^1.0.0",
+    "try-catch": "^4.0.9",
     "try-to-catch": "^4.0.0"
   },
   "keywords": [
