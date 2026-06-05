@@ -1,3 +1,11 @@
+2026.06.05, v6.5.1
+
+fix:
+- 9819cdc redlint: convert: masterConvert: filename
+
+feature:
+- 3a8aa1f redlint: supertape v13.2.0
+
 2026.05.04, v6.5.0
 
 feature:
