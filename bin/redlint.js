@@ -190,7 +190,7 @@ async function uiLoop(arg) {
             filename = await askFilename();
         
         if (filename)
-            await masterConvert(fileTree.filename, arg, filesystem);
+            await masterConvert(filename, arg, filesystem);
         
         return;
     }
