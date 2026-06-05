@@ -45,6 +45,7 @@ To scan your files use `redlint scan`:
 - ✅ [`package-json/find-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-package-json#find-file);
 - ✅ [`package-json/remove-exports-with-missing-files`](https://github.com/coderaiser/putout/tree/master/packages/plugin-package-json#remove-exports-with-missing-files);
 - ✅ [`esm/resolve-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#resolve-imported-file);
+- ✅ [`esm/resolve-imported-file-with-extension`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#resolve-imported-file-with-extension);
 - ✅ [`esm/shorten-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#shorten-imported-file);
 - ✅ [`esm/apply-name-to-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#apply-name-to-imported-file);
 - ✅ [`esm/apply-namespace-to-imported-file`](https://github.com/coderaiser/putout/tree/master/packages/plugin-esm#apply-name-to-imported-file);
