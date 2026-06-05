@@ -27,7 +27,7 @@ import {version} from '../lib/cli/version.js';
 import {chooseConvert} from '../lib/convert/index.js';
 import {chooseRename} from '../lib/rename/index.js';
 import {convert} from '../lib/convert/convert.js';
-import {masterConvert} from '../lib/convert/master.js';
+import {runConvert} from '../lib/convert/run-convert.js';
 import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
 import {view} from '../lib/view/view.js';
@@ -55,7 +55,6 @@ import {
     isBack,
     isExit,
     isBundleDebug,
-    isConvertRCToFlat,
     isEdit,
     isView,
     VIEW,
@@ -184,14 +183,14 @@ async function uiLoop(arg) {
     }
     
     if (isConvertChosen(arg)) {
-        let filename = '.eslintrc.json';
-        
-        if (!isConvertRCToFlat(arg))
-            filename = await askFilename();
-        
-        if (filename)
-            await masterConvert(filename, arg, filesystem);
-        
+        await runConvert(arg, filesystem);
+        return;
+    }
+    
+    if (isConvertChosenDebug(arg)) {
+        await runConvert(arg, filesystem, {
+            convert,
+        });
         return;
     }
     
@@ -202,15 +201,6 @@ async function uiLoop(arg) {
     
     if (isRenameToJsxChosen(arg)) {
         await masterRename('*.js', arg, filesystem);
-        return;
-    }
-    
-    if (isConvertChosenDebug(arg)) {
-        const filename = await askFilename();
-        
-        if (filename)
-            await convert(filename, arg, filesystem);
-        
         return;
     }
     
