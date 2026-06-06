@@ -6,8 +6,8 @@
 - **No `t.pass('everything ok')` in tests** — every assertion must test something meaningful.
 - **100% coverage required** — checked via [`.nycrc.json`](.nycrc.json). Run `redrun coverage` to verify.
 - **Tests use [supertape](https://github.com/coderaiser/supertape)** with `stub()` for mocking.
-- **TDD is encouraged** — write a failing test first, then implement, then `redrun fix:lint test`.
-- **Run `redrun fix:lint test` before every commit** — linter must be clean, all tests green.
+- **TDD is encouraged** — write a failing test first, then implement, then `redrun fix:lint coverage`.
+- **Run `redrun fix:lint coverage` before every commit** — linter must be clean, all tests green, coverage 100%.
 
 ## Table of Contents
 
