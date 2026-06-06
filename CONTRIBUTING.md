@@ -14,6 +14,7 @@
 - [Do / Don't](#do--dont)
 - [Workflow](#workflow)
 - [Architecture](#architecture)
+- [How to add a new converter](#how-to-add-a-new-converter)
 - [Import Map](#import-map)
 - [File Tree](#file-tree)
 - [Overrides Pattern](#overrides-pattern)
@@ -73,6 +74,98 @@ The debug mode is an escape hatch when workers misbehave.
 - Framework: [supertape](https://github.com/coderaiser/supertape)
 - Mocking: `stub()` from supertape (no external mocking library)
 - Fixtures: plain `.js` files in `fixture/` directories
+
+## How to add a new converter (e.g. `convert-json-to-yaml`)?
+
+All converters live in `lib/convert/converters/` and follow the same pattern. Adding a new one requires changes in **6 files** (1 new, 5 modified):
+
+### 1. Create the converter — `lib/convert/converters/convert-X-to-Y.js`
+
+```js
+import * as pluginFilesystem from '@putout/plugin-filesystem';
+
+const [, pluginConvertXToY] = pluginFilesystem.rules['convert-X-to-Y'];
+
+export const convertXToY = (filename) => ({
+    rules: {
+        'filesystem/convert-X-to-Y': ['on', {
+            filename,
+        }],
+    },
+    plugins: [
+        ['filesystem/convert-X-to-Y', pluginConvertXToY],
+    ],
+});
+```
+
+The `[@putout/plugin-filesystem](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem)`
+package must already export the rule (use `[@putout/plugin-filesystem](https://github.com/coderaiser/putout/tree/master/packages/plugin-filesystem)` >= 13.2.0 for `convert-json-to-yaml`).
+
+### 2. Register menu constants — `lib/menu.js`
+
+Add a pair of exports (normal + debug):
+
+```js
+export const CONVERT_X_TO_Y = '🦏 convert x to y';
+export const CONVERT_X_TO_Y_DEBUG = '🦏 convert x to y: debug';
+```
+
+Then add `CONVERT_X_TO_Y` to the array in `isConvertChosen()` and `CONVERT_X_TO_Y_DEBUG` to the array in `isConvertChosenDebug()`.
+
+### 3. Add to converters map — `lib/convert/create-options.js`
+
+```js
+import {convertXToY} from './converters/convert-X-to-Y.js';
+
+const CONVERTERS = {
+    // ...existing...
+    [CONVERT_X_TO_Y]: convertXToY,
+    [CONVERT_X_TO_Y_DEBUG]: convertXToY,
+};
+```
+
+### 4. Add to convert menu — `lib/convert/index.js`
+
+Import `CONVERT_X_TO_Y` and add it to the `chooseConvert()` dialog array.
+
+### 5. Add to debug menu — `lib/debug.js`
+
+Import `CONVERT_X_TO_Y_DEBUG` and add it to the `debug()` dialog array.
+
+### 6. Add a test — `lib/convert/convert.spec.js`
+
+```js
+import {CONVERT_X_TO_Y} from '../menu.js';
+
+test('redlint: convert: x to y', (t) => {
+    const filesystem = stringify([
+        '/hello/world/',
+        '/hello/world/file.x',
+    ]);
+    
+    const converted = convert('file.x', CONVERT_X_TO_Y, filesystem, {
+        merge,
+        branch,
+    });
+    
+    const result = parse(converted);
+    
+    const expected = ['/hello/world/', [
+        '/hello/world/file.y',
+        'e30K',
+    ]];
+    
+    t.deepEqual(result, expected);
+    t.end();
+});
+```
+
+### 🧪 Verify
+
+```sh
+redrun fix:lint     # putout . --fix — must pass
+redrun coverage     # 100% required
+```
 
 ## Import Map
 
