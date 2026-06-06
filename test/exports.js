@@ -1,4 +1,4 @@
-import {test} from './create-test.js';
+import {test} from '#test';
 
 test('redlint: exports: simple', async (t) => {
     const result = await import('redlint/simple');

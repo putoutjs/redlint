@@ -27,6 +27,8 @@
     "test:dts": "madrun test:dts",
     "watch:test": "madrun watch:test",
     "lint": "madrun lint",
+    "scan": "madrun scan",
+    "scan:fix": "madrun scan:fix",
     "fresh:lint": "madrun fresh:lint",
     "lint:fresh": "madrun lint:fresh",
     "fix:lint": "madrun fix:lint",
