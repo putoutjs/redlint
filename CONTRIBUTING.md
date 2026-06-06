@@ -177,5 +177,5 @@ This pattern keeps functions pure, easy to unit test, and doesn't require any mo
 | [madrun](https://github.com/coderaiser/madrun)        | Define tasks in `.madrun.js`                         | `redrun`             |
 | [putout](https://github.com/coderaiser/putout)        | JavaScript code transformer & linter                 | `redrun fix:lint`    |
 | [supertape](https://github.com/coderaiser/supertape)  | Test framework with built-in `stub()`                | `redrun test`        |
-| [superc8](https://github.com/coderaiser/superc8)      | Enhanced c8 wrapper                                  | `redrun coverage`    |
+| [superc8](https://github.com/coderaiser/superc8)      | coverage tool, drop-in modern  `c8` replacement                                  | `redrun coverage`    |
 | [nodemon](https://github.com/remy/nodemon)            | Watch mode for tests                                 | `redrun watch:test`  |
