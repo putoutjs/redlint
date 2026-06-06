@@ -57,6 +57,7 @@ import {
     isBundleDebug,
     isEdit,
     isView,
+    isKnownCommand,
     VIEW,
     TEST,
     isTest,
@@ -119,6 +120,11 @@ async function uiLoop(arg) {
     
     if (!arg)
         return;
+    
+    if (!isKnownCommand(arg)) {
+        console.error(`'${arg}' is not a redlint command. See 'redlint --help'.`);
+        process.exit(1);
+    }
     
     log('Running:');
     const spinner = ora('index filesystem').start();
