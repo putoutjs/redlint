@@ -495,7 +495,7 @@ feature:
 2024.02.02, v3.11.1
 
 fix:
-- 779bf51 isConvertToJson
+- 779bf51 isConvertJSToJson
 
 feature:
 - 6edb2f7 redlint: @putout/plugin-filesystem v4.0.0
