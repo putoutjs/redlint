@@ -22,14 +22,14 @@
 ## Do / Don't
 
 | Do                                               | Don't                                            |
-|--------------------------------------------------|--------------------------------------------------|
-| Write one assertion per test                     | Use `t.pass('ok')` or `t.comment()`              |
-| Use descriptive test names                       | Use vague names like `'test1'`                   |
-| Inject deps via `overrides`                      | Import real modules inline (hard to stub)        |
-| Use early returns to flatten logic               | Nest deeply with `if/else` chains                |
-| Keep modules small, one concern per file         | Put multiple operations in one file              |
-| Use `async` for tests that `await`               | Forget `await` in async test functions           |
-| Run `redrun fix:lint test` before commit         | Commit red linter output                         |
+|--------------------------------------------------|------------------------------------------------|
+| Write one assertion per test                     | Use `t.pass('ok')` or `t.comment()`            |
+| Use descriptive test names                       | Use vague names like `'test1'`                 |
+| Inject deps via `overrides`                      | Import real modules inline (hard to stub)      |
+| Use early returns to flatten logic               | Nest deeply with `if/else` chains              |
+| Keep modules small, one concern per file         | Put multiple operations in one file            |
+| Use `async` for tests that `await`               | Forget `await` in async test functions         |
+| Run `redrun fix:lint coverage` before commit         | Commit red linter output                   |
 
 ## Workflow
 
