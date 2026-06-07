@@ -1,3 +1,10 @@
+2026.06.07, v6.8.0
+
+feature:
+- 4bd96fe redlint: convert: convert-toml-to-yaml: add
+- c58d5a5 convert-json-to-toml: add
+- 2978ff4 redlint: convert toml to json
+
 2026.06.07, v6.7.0
 
 feature:
