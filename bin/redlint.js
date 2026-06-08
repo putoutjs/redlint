@@ -32,6 +32,7 @@ import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
 import {view} from '../lib/view/view.js';
 import {test} from '../lib/test/test.js';
+import {runConvertWithOptions} from '../lib/convert/run-convert-with-options/run-convert-with-options.js';
 import {
     isScan,
     isScanDebug,
@@ -103,7 +104,7 @@ async function uiLoop(arg) {
         return process.exit();
     }
     
-    if (isConvert(arg))
+    if (isConvert(arg) && !argOptions.length)
         arg = await chooseConvert();
     
     if (isRename(arg))
@@ -186,6 +187,11 @@ async function uiLoop(arg) {
             nested,
             remove,
         });
+    }
+    
+    if (isConvert(arg) && argOptions.length) {
+        runConvertWithOptions(filesystem, argOptions);
+        return;
     }
     
     if (isConvertChosen(arg)) {
@@ -337,3 +343,4 @@ function done(message) {
     const spinner = ora(message).start();
     spinner.succeed();
 }
+
