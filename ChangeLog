@@ -1,3 +1,11 @@
+2026.06.08, v6.9.0
+
+feature:
+- 07c69cd test: compare-files: no file found
+- da040d4 redlint: test: run: module.exports overwrite
+- 3747c0e redlint: test: transformWithOptions
+- 3b2954b redlint: test: read-fixture: rm unused names
+
 2026.06.07, v6.8.0
 
 feature:
