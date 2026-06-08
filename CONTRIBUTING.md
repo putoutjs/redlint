@@ -186,47 +186,19 @@ Used in `bin/redlint.js`:
 import {edit, editHelp} from '#edit';
 ```
 
-## File Tree
-
-```
-redlint/
-├── bin/redlint.js          # CLI entry point
-├── lib/
-│   ├── convert/            # convert json↔js, rc→flat
-│   ├── edit/               # interactive filesystem editing
-│   ├── extract/            # unpack filesystem.red
-│   ├── help/               # --help output
-│   ├── lint/               # scan & fix filesystem
-│   ├── pack/               # pack to filesystem.red
-│   ├── rename/             # rename js↔jsx
-│   ├── test/               # test runner & plugins
-│   ├── view/               # view file contents
-│   ├── cli/                # version
-│   ├── choose.js           # interactive menu
-│   ├── debug.js            # debug menu
-│   ├── dialog.js           # ask for filename
-│   ├── menu.js             # menu constants & predicates
-│   ├── redlint.js          # buildTree
-│   ├── run.js              # worker runner
-│   ├── simple.js           # simple filesystem format
-│   ├── slave.js            # worker helper
-│   └── spinner.js          # CLI spinner
-├── test/                   # integration tests
-├── .nycrc.json             # coverage config (100% required)
-├── .madrun.js              # task runner scripts
-├── .putout.json            # putout rules
-└── package.json
-```
-
 ## Overrides Pattern
 
 When a module calls external dependencies, accept them as optional overrides so tests can inject stubs:
 
 ```js
+import {operator} from 'putout';
+
+const {getFilename} = operator;
+
 // run-convert.js
 export const runConvert = async (arg, filesystem, overrides = {}) => {
     const {
-        askFilename = askFilename,
+        getFilename = askFilename,
         convert = masterConvert,
         isRCToFlat = isConvertRCToFlat,
     } = overrides;
