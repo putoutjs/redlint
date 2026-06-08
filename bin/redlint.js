@@ -343,4 +343,3 @@ function done(message) {
     const spinner = ora(message).start();
     spinner.succeed();
 }
-
