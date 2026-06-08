@@ -32,7 +32,7 @@ import {askFilename} from '../lib/dialog.js';
 import {masterRename} from '../lib/rename/master.js';
 import {view} from '../lib/view/view.js';
 import {test} from '../lib/test/test.js';
-import {runConvertWithOptions} from '../lib/convert/run-convert-with-options/run-convert-with-options.js';
+import {runDSLConverter} from '../lib/convert/dsl/dsl.js';
 import {
     isScan,
     isScanDebug,
@@ -190,7 +190,7 @@ async function uiLoop(arg) {
     }
     
     if (isConvert(arg) && argOptions.length) {
-        const [error] = runConvertWithOptions(filesystem, argOptions);
+        const [error] = runDSLConverter(filesystem, argOptions);
         
         if (error)
             console.error(error.message);
