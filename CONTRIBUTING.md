@@ -226,7 +226,7 @@ When a module calls external dependencies, accept them as optional overrides so 
 // run-convert.js
 export const runConvert = async (arg, filesystem, overrides = {}) => {
     const {
-        askFilename: getFilename = askFilename,
+        askFilename = askFilename,
         convert = masterConvert,
         isRCToFlat = isConvertRCToFlat,
     } = overrides;
@@ -234,7 +234,7 @@ export const runConvert = async (arg, filesystem, overrides = {}) => {
     let filename = '.eslintrc.json';
     
     if (!isRCToFlat(arg))
-        filename = await getFilename();
+        filename = await askFilename();
     
     if (filename)
         return await convert(filename, arg, filesystem);
