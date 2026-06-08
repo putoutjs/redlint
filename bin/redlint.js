@@ -159,7 +159,7 @@ async function uiLoop(arg) {
         const [error, result] = test(filesystem);
         
         if (error)
-            return console.error('\n🌴 ' + error.message + '');
+            return console.error(error.message);
         
         stdout.write(result);
         return;
@@ -190,7 +190,11 @@ async function uiLoop(arg) {
     }
     
     if (isConvert(arg) && argOptions.length) {
-        runConvertWithOptions(filesystem, argOptions);
+        const [error] = runConvertWithOptions(filesystem, argOptions);
+        
+        if (error)
+            console.error(error.message);
+        
         return;
     }
     
