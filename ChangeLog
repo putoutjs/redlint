@@ -1,3 +1,13 @@
+2026.06.09, v6.9.2
+
+feature:
+- 4c437c3 redlint: convert: dsl
+- 365da21 redlint: run-convert-with-options: -h
+- 73a02b3 redlint: run-convert-with-options: add
+- aada911 run-convert-with-options: parser-converter
+- 3dc97b9 redlint: convert yaml to toml: add
+- 32d279a redlint: run convert with options
+
 2026.06.08, v6.9.1
 
 feature:
