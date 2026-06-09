@@ -2,12 +2,13 @@
 
 ## Quick Reference
 
-- **No unused variables or imports** — clean them up before committing.
-- **No `t.pass('everything ok')` in tests** — every assertion must test something meaningful.
+- **TDD is encouraged** - write a failing test first, then implement, then `redrun fix:lint coverage`.
+- **No `t.pass('everything ok')` in tests** - every assertion must test something meaningful.
+- **Try to avoid `t.notOk(error)` in tests where possible** - use only when no other ways.
+- **Prefer integration tests over stubs when they not to slow** - more future proof, helps in refactoring
 - **100% coverage required** — checked via [`.nycrc.json`](.nycrc.json). Run `redrun coverage` to verify.
 - **Tests use [supertape](https://github.com/coderaiser/supertape)** with `stub()` for mocking.
-- **TDD is encouraged** — write a failing test first, then implement, then `redrun fix:lint coverage`.
-- **Run `redrun fix:lint coverage` before every commit** — linter must be clean, all tests green, coverage 100%.
+- **Run `redrun fix:lint coverage` before every commit** - linter must be clean, all tests green, coverage 100%.
 
 ## Table of Contents
 
